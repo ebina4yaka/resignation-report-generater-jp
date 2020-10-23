@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-export default function ExportParameters(): React.ReactElement {
+export default function ParametersField(): React.ReactElement {
   const nowYear = new Date().getFullYear()
   const nowMonth = new Date().getMonth() + 1
   const nowDate = new Date().getDate()

@@ -1,21 +1,14 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
-import clsx from 'clsx'
+import { createStyles, makeStyles } from '@material-ui/core/styles'
+import LinkButton from '../atoms/LinkButton'
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(
   createStyles({
     root: {
       display: 'flex',
       flexWrap: 'wrap',
       flexDirection: 'row',
       justifyContent: 'center',
-    },
-    margin: {
-      margin: theme.spacing(3),
-    },
-    button: {
-      width: '14ch',
     },
   })
 )
@@ -24,20 +17,9 @@ export default function ExportButtons(): React.ReactElement {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <Button
-        className={clsx(classes.margin, classes.button)}
-        variant="contained"
-        color="secondary"
-      >
-        PDF出力
-      </Button>
-      <Button
-        className={clsx(classes.margin, classes.button)}
-        variant="contained"
-        color="secondary"
-      >
-        Word出力
-      </Button>
+      <LinkButton href="/" text="戻る" color="secondary" variant="contained" />
+      <LinkButton href="" text="PDF出力" color="primary" variant="contained" />
+      <LinkButton href="" text="WORD出力" color="primary" variant="contained" />
     </div>
   )
 }
