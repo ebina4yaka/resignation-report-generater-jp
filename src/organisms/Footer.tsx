@@ -1,7 +1,7 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
 import makeStyles from '@material-ui/core/styles/makeStyles'
-import Copyright from '../atoms/Coryright'
+import Copyright from '../atoms/Copyright'
 
 const useStyles = makeStyles((theme) => ({
   root: {

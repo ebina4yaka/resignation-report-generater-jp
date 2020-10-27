@@ -9,7 +9,7 @@ export default function Copyright(): React.ReactElement {
       <MuiLink color="inherit" href="https://github.com/ebina4yaka">
         ebina4yaka
       </MuiLink>
-      {` ${new Date().getFullYear()}.`}
+      {` 2020.`}
     </Typography>
   )
 }
