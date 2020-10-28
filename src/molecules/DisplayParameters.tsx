@@ -1,9 +1,8 @@
 import React, { useContext } from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
-import dayjs from 'dayjs'
-import 'dayjs/locale/ja'
 import { parametersContext } from '../context/useParameters'
 import Parameters from '../atoms/Parameter'
+import convertDateStringToJapanFormat from '../libs/convertDateStringToJapanFormat'
 
 const useStyles = makeStyles(
   createStyles({
@@ -15,11 +14,6 @@ const useStyles = makeStyles(
     },
   })
 )
-
-function convertDateToJapanFormat(dateString: string): string {
-  dayjs.locale('ja')
-  return dayjs(dateString).format('YYYY年MM月DD日 dddd')
-}
 
 export default function DisplayParameters(): React.ReactElement {
   const context = useContext(parametersContext)
@@ -37,7 +31,7 @@ export default function DisplayParameters(): React.ReactElement {
       <Parameters name="会社名" value={companyName} />
       <Parameters
         name="退職日"
-        value={convertDateToJapanFormat(dateOfRetirement)}
+        value={convertDateStringToJapanFormat(dateOfRetirement)}
       />
       <Parameters name="退職理由" value={reason} />
       <Parameters

@@ -1,7 +1,7 @@
 import { createContext, useCallback, useState } from 'react'
 import dayjs from 'dayjs'
 
-type ParametersContext = {
+export type ParametersContext = {
   name: string
   companyName: string
   dateOfRetirement: string

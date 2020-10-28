@@ -1,8 +1,10 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import ExportDialog from './ExportDialog'
 import { parametersContext } from '../context/useParameters'
 import ConfirmButton from '../atoms/ConfirmButton'
+import useIsButtonDisable from '../hooks/useIsButtonDisable'
+import useDialogOpen from '../hooks/useDialogOpen'
 
 const useStyles = makeStyles(
   createStyles({
@@ -15,44 +17,15 @@ const useStyles = makeStyles(
   })
 )
 
-const useIsButtonDisable = (): boolean => {
-  const context = useContext(parametersContext)
-  const { name, companyName, dateOfRetirement, reason } = context
-  const [isDisable, setIsDisable] = React.useState(false)
-  useEffect(() => {
-    setIsDisable(
-      name === '' ||
-        companyName === '' ||
-        dateOfRetirement === '' ||
-        reason === ''
-    )
-  }, [context])
-  return isDisable
-}
-
-const useDialogOpen = (): {
-  isOpen: boolean
-  handleOpen: () => void
-  handleClose: () => void
-} => {
-  const [isOpen, setOpen] = React.useState(false)
-  const handleOpen = () => {
-    setOpen(true)
-  }
-  const handleClose = () => {
-    setOpen(false)
-  }
-  return { isOpen, handleOpen, handleClose }
-}
-
 export default function ParametersConfirm(): React.ReactElement {
+  const context = useContext(parametersContext)
   const classes = useStyles()
   const { isOpen, handleOpen, handleClose } = useDialogOpen()
   return (
     <div className={classes.root}>
       <ConfirmButton
         text="確認"
-        isDisable={useIsButtonDisable()}
+        isDisable={useIsButtonDisable(context)}
         onClickFunction={handleOpen}
       />
       <ExportDialog isOpen={isOpen} handleClose={handleClose} />
