@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for Header 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <header
+    className="MuiPaper-root MuiAppBar-root MuiAppBar-positionRelative MuiAppBar-colorPrimary MuiPaper-elevation4"
+  >
+    <div
+      className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+    >
+      <div
+        className="makeStyles-icon-2"
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"
+          />
+        </svg>
+      </div>
+      <h6
+        className="MuiTypography-root makeStyles-title-3 MuiTypography-h6 MuiTypography-colorInherit"
+      >
+        test
+      </h6>
+    </div>
+  </header>
+</div>
+`;

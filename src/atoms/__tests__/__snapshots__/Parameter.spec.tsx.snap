@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for Parameter 1`] = `
+<div>
+  <h6
+    className="MuiTypography-root MuiTypography-h6"
+  >
+    test name
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+  >
+    test value
+  </p>
+</div>
+`;
