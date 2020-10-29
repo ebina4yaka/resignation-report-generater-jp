@@ -3,7 +3,7 @@ import { createStyles, makeStyles } from '@material-ui/core/styles'
 import { parametersContext } from '../context/useParameters'
 import Parameters from '../atoms/Parameter'
 import convertDateStringToJapanFormat from '../libs/convertDateStringToJapanFormat'
-import addTwoWeekDate from '../libs/addTwoWeekDate'
+import calcDateOfRetirement from '../libs/calcDateOfRetirement'
 
 const useStyles = makeStyles(
   createStyles({
@@ -41,7 +41,7 @@ export default function DisplayParameters(): React.ReactElement {
       <Parameters
         name="退職日"
         value={convertDateStringToJapanFormat(
-          addTwoWeekDate(dateOfNotification)
+          calcDateOfRetirement(dateOfNotification, daysOfPaidLeaveRemaining)
         )}
       />
       <Parameters name="退職理由" value={reason} />

@@ -4,7 +4,7 @@ import InputAdornment from '@material-ui/core/InputAdornment'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import { parametersContext } from '../context/useParameters'
 import removeNonNumberFromString from '../libs/removeNonNumberFromString'
-import addTwoWeekDate from '../libs/addTwoWeekDate'
+import calcDateOfRetirement from '../libs/calcDateOfRetirement'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -42,12 +42,14 @@ export default function ParametersField(): React.ReactElement {
   } = context
 
   const [dateOfRetirement, setDateOfRetirement] = useState(
-    addTwoWeekDate(dateOfNotification)
+    calcDateOfRetirement(dateOfNotification, daysOfPaidLeaveRemaining)
   )
 
   useEffect(() => {
-    setDateOfRetirement(addTwoWeekDate(dateOfNotification))
-  }, [dateOfNotification])
+    setDateOfRetirement(
+      calcDateOfRetirement(dateOfNotification, daysOfPaidLeaveRemaining)
+    )
+  }, [dateOfNotification, daysOfPaidLeaveRemaining])
 
   const handleChangeName = (event: ChangeEvent<HTMLInputElement>) => {
     const { target } = event
