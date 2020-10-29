@@ -35,6 +35,7 @@ export default function ExportDialogButtons(props: Props): React.ReactElement {
   const {
     name,
     companyName,
+    representativeDirector,
     dateOfRetirement,
     reason,
     daysOfPaidLeaveRemaining,
@@ -43,6 +44,7 @@ export default function ExportDialogButtons(props: Props): React.ReactElement {
   const exportParameters: ExportParameters = {
     name,
     companyName,
+    representativeDirector,
     dateOfRetirement: convertDateStringToJapanFormat(dateOfRetirement),
     reason,
     daysOfPaidLeaveRemaining,

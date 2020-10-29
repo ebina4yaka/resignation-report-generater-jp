@@ -26,6 +26,10 @@ describe('ParametersField Tests', () => {
       dom.container,
       'companyName'
     ) as HTMLInputElement
+    const inputRepresentativeDirector = getById(
+      dom.container,
+      'representativeDirector'
+    ) as HTMLInputElement
     const inputDateOfRetirement = getById(
       dom.container,
       'dateOfRetirement'
@@ -39,6 +43,9 @@ describe('ParametersField Tests', () => {
     act(() => {
       fireEvent.change(inputName, { target: { value: '無職太郎' } })
       fireEvent.change(inputCompanyName, { target: { value: '株式会社無職' } })
+      fireEvent.change(inputRepresentativeDirector, {
+        target: { value: '無職社長' },
+      })
       fireEvent.change(inputDateOfRetirement, {
         target: { value: '2020-01-01' },
       })
@@ -52,6 +59,7 @@ describe('ParametersField Tests', () => {
 
     expect(result.current.name).toBe('無職太郎')
     expect(result.current.companyName).toBe('株式会社無職')
+    expect(result.current.representativeDirector).toBe('無職社長')
     expect(result.current.dateOfRetirement).toBe('2020-01-01')
     expect(result.current.reason).toBe('労働基準法に違反しているため')
     expect(result.current.daysOfPaidLeaveRemaining).toBe(10)

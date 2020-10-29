@@ -30,6 +30,7 @@ export default function ParametersField(): React.ReactElement {
   const {
     name,
     companyName,
+    representativeDirector,
     dateOfRetirement,
     reason,
     daysOfPaidLeaveRemaining,
@@ -39,6 +40,13 @@ export default function ParametersField(): React.ReactElement {
   const handleChangeName = (event: ChangeEvent<HTMLInputElement>) => {
     const { target } = event
     context.setName(target.value)
+  }
+
+  const handleChangeRepresentativeDirector = (
+    event: ChangeEvent<HTMLInputElement>
+  ) => {
+    const { target } = event
+    context.setRepresentativeDirector(target.value)
   }
 
   const handleChangeCompanyName = (event: ChangeEvent<HTMLInputElement>) => {
@@ -94,6 +102,19 @@ export default function ParametersField(): React.ReactElement {
         className={clsx(classes.margin, classes.textField)}
         autoComplete="off"
         onChange={handleChangeCompanyName}
+      />
+      <TextField
+        required
+        id="representativeDirector"
+        label="代表取締役"
+        defaultValue={representativeDirector}
+        placeholder="無職社長"
+        InputLabelProps={{
+          shrink: true,
+        }}
+        className={clsx(classes.margin, classes.textField)}
+        autoComplete="off"
+        onChange={handleChangeRepresentativeDirector}
       />
       <TextField
         required

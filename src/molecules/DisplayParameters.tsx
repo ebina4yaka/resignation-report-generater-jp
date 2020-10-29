@@ -20,6 +20,7 @@ export default function DisplayParameters(): React.ReactElement {
   const {
     name,
     companyName,
+    representativeDirector,
     dateOfRetirement,
     reason,
     daysOfPaidLeaveRemaining,
@@ -29,6 +30,7 @@ export default function DisplayParameters(): React.ReactElement {
     <div className={classes.root}>
       <Parameters name="退職者" value={name} />
       <Parameters name="会社名" value={companyName} />
+      <Parameters name="代表取締役" value={representativeDirector} />
       <Parameters
         name="退職日"
         value={convertDateStringToJapanFormat(dateOfRetirement)}

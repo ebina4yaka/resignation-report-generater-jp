@@ -13,6 +13,10 @@ exports[`Snapshot test for DisplayParameters 1`] = `
     value=""
   />
   <MockedParameters
+    name="代表取締役"
+    value=""
+  />
+  <MockedParameters
     name="退職日"
     value="Invalid Date"
   />
