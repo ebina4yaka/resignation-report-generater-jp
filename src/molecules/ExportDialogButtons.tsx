@@ -2,11 +2,12 @@ import React, { useContext } from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import clsx from 'clsx'
+import dayjs from 'dayjs'
 import exportDocx from '../libs/export/exportDocx'
 import { ExportParameters } from '../libs/export/ExportParameters'
 import { parametersContext } from '../context/useParameters'
 import convertDateStringToJapanFormat from '../libs/convertDateStringToJapanFormat'
-import addTwoWeekDate from '../libs/addTwoWeekDate'
+import calcDateOfRetirement from '../libs/calcDateOfRetirement'
 
 type Props = {
   handleClose: () => void
@@ -50,7 +51,12 @@ export default function ExportDialogButtons(props: Props): React.ReactElement {
     representativeDirector,
     dateOfNotification: convertDateStringToJapanFormat(dateOfNotification),
     dateOfRetirement: convertDateStringToJapanFormat(
-      addTwoWeekDate(dateOfNotification)
+      calcDateOfRetirement(dateOfNotification, daysOfPaidLeaveRemaining)
+    ),
+    endDateOfPaidLeave: convertDateStringToJapanFormat(
+      dayjs(dateOfNotification)
+        .add(daysOfPaidLeaveRemaining, 'day')
+        .format('YYYY-MM-DD')
     ),
     reason,
     daysOfPaidLeaveRemaining,

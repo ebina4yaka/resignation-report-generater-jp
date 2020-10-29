@@ -5,6 +5,7 @@ export type ExportParameters = {
   representativeDirector: string
   dateOfNotification: string
   dateOfRetirement: string
+  endDateOfPaidLeave: string
   reason: string
   daysOfPaidLeaveRemaining: number
 }

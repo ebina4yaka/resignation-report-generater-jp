@@ -128,7 +128,11 @@ function createPaidLeaveRequestForm(parameters: ExportParameters): Paragraph[] {
 
   const date = [
     new Paragraph({
-      text: `${parameters.dateOfNotification}～${parameters.dateOfRetirement}`,
+      text: `${parameters.dateOfNotification}～${parameters.endDateOfPaidLeave}`,
+      alignment: AlignmentType.LEFT,
+    }),
+    new Paragraph({
+      text: `合計 ${parameters.daysOfPaidLeaveRemaining}日間`,
       alignment: AlignmentType.LEFT,
     }),
   ]

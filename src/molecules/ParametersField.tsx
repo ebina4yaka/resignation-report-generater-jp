@@ -172,7 +172,6 @@ export default function ParametersField(): React.ReactElement {
           shrink: true,
         }}
         autoComplete="off"
-        onChange={handleChangeDateOfRetirement}
       />
       <TextField
         required
