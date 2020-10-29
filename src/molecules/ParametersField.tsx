@@ -1,10 +1,10 @@
-import React, { ChangeEvent, useContext } from 'react'
+import React, { ChangeEvent, useContext, useEffect, useState } from 'react'
 import TextField from '@material-ui/core/TextField'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
-import clsx from 'clsx'
 import { parametersContext } from '../context/useParameters'
 import removeNonNumberFromString from '../libs/removeNonNumberFromString'
+import addTwoWeekDate from '../libs/addTwoWeekDate'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -14,29 +14,40 @@ const useStyles = makeStyles((theme: Theme) =>
       flexDirection: 'column',
       justifyContent: 'center',
     },
-    margin: {
-      margin: theme.spacing(1),
+    text: {
       marginLeft: 'auto',
       marginRight: 'auto',
+      textAlign: 'left',
     },
     textField: {
       width: '30ch',
+      margin: theme.spacing(1),
+      marginLeft: 'auto',
+      marginRight: 'auto',
     },
   })
 )
 
 export default function ParametersField(): React.ReactElement {
+  const classes = useStyles()
   const context = useContext(parametersContext)
   const {
     name,
     companyName,
     department,
     representativeDirector,
-    dateOfRetirement,
+    dateOfNotification,
     reason,
     daysOfPaidLeaveRemaining,
   } = context
-  const classes = useStyles()
+
+  const [dateOfRetirement, setDateOfRetirement] = useState(
+    addTwoWeekDate(dateOfNotification)
+  )
+
+  useEffect(() => {
+    setDateOfRetirement(addTwoWeekDate(dateOfNotification))
+  }, [dateOfNotification])
 
   const handleChangeName = (event: ChangeEvent<HTMLInputElement>) => {
     const { target } = event
@@ -64,7 +75,7 @@ export default function ParametersField(): React.ReactElement {
     event: ChangeEvent<HTMLInputElement>
   ) => {
     const { target } = event
-    context.setDateOfRetirement(target.value)
+    context.setDateOfNotification(target.value)
   }
 
   const handleChangeReason = (event: ChangeEvent<HTMLInputElement>) => {
@@ -92,7 +103,7 @@ export default function ParametersField(): React.ReactElement {
         InputLabelProps={{
           shrink: true,
         }}
-        className={clsx(classes.margin, classes.textField)}
+        className={classes.textField}
         autoComplete="off"
         onChange={handleChangeName}
       />
@@ -105,7 +116,7 @@ export default function ParametersField(): React.ReactElement {
         InputLabelProps={{
           shrink: true,
         }}
-        className={clsx(classes.margin, classes.textField)}
+        className={classes.textField}
         autoComplete="off"
         onChange={handleChangeCompanyName}
       />
@@ -117,7 +128,7 @@ export default function ParametersField(): React.ReactElement {
         InputLabelProps={{
           shrink: true,
         }}
-        className={clsx(classes.margin, classes.textField)}
+        className={classes.textField}
         autoComplete="off"
         onChange={handleChangeDepartment}
       />
@@ -130,22 +141,36 @@ export default function ParametersField(): React.ReactElement {
         InputLabelProps={{
           shrink: true,
         }}
-        className={clsx(classes.margin, classes.textField)}
+        className={classes.textField}
         autoComplete="off"
         onChange={handleChangeRepresentativeDirector}
       />
       <TextField
         required
-        id="dateOfRetirement"
-        label="退職日"
+        id="dateOfNotification"
+        label="退職届け出日"
         type="date"
-        defaultValue={dateOfRetirement}
-        className={clsx(classes.margin, classes.textField)}
+        defaultValue={dateOfNotification}
+        className={classes.textField}
         InputLabelProps={{
           shrink: true,
         }}
         autoComplete="off"
-        onChangeCapture={handleChangeDateOfRetirement}
+        onChange={handleChangeDateOfRetirement}
+      />
+      <TextField
+        disabled
+        required
+        id="dateOfRetirement"
+        label="退職日"
+        type="date"
+        value={dateOfRetirement}
+        className={classes.textField}
+        InputLabelProps={{
+          shrink: true,
+        }}
+        autoComplete="off"
+        onChange={handleChangeDateOfRetirement}
       />
       <TextField
         required
@@ -156,7 +181,7 @@ export default function ParametersField(): React.ReactElement {
         InputLabelProps={{
           shrink: true,
         }}
-        className={clsx(classes.margin, classes.textField)}
+        className={classes.textField}
         autoComplete="off"
         onChange={handleChangeReason}
       />
@@ -165,7 +190,7 @@ export default function ParametersField(): React.ReactElement {
         label="残有給休暇日数"
         id="daysOfPaidLeaveRemaining"
         defaultValue={daysOfPaidLeaveRemaining}
-        className={clsx(classes.margin, classes.textField)}
+        className={classes.textField}
         InputProps={{
           endAdornment: <InputAdornment position="end">日</InputAdornment>,
         }}

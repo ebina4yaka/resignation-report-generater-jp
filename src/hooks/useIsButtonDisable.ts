@@ -8,7 +8,7 @@ export default function useIsButtonDisable(
     name,
     companyName,
     representativeDirector,
-    dateOfRetirement,
+    dateOfNotification,
     reason,
   } = context
   const [isDisable, setIsDisable] = useState(false)
@@ -17,7 +17,7 @@ export default function useIsButtonDisable(
       name === '' ||
         companyName === '' ||
         representativeDirector === '' ||
-        dateOfRetirement === '' ||
+        dateOfNotification === '' ||
         reason === ''
     )
   }, [context])

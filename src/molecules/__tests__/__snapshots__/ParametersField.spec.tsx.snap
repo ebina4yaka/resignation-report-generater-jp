@@ -5,7 +5,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
   className="makeStyles-root-1"
 >
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-margin-2 makeStyles-textField-3"
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
@@ -45,7 +45,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-margin-2 makeStyles-textField-3"
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
@@ -85,7 +85,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-margin-2 makeStyles-textField-3"
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
@@ -118,7 +118,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-margin-2 makeStyles-textField-3"
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
@@ -158,16 +158,15 @@ exports[`ParametersField Tests Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-margin-2 makeStyles-textField-3"
-    onChangeCapture={[Function]}
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
       data-shrink={true}
-      htmlFor="dateOfRetirement"
-      id="dateOfRetirement-label"
+      htmlFor="dateOfNotification"
+      id="dateOfNotification-label"
     >
-      退職日
+      退職届け出日
       <span
         aria-hidden={true}
         className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
@@ -187,7 +186,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
         className="MuiInputBase-input MuiInput-input"
         defaultValue=""
         disabled={false}
-        id="dateOfRetirement"
+        id="dateOfNotification"
         onAnimationStart={[Function]}
         onBlur={[Function]}
         onChange={[Function]}
@@ -198,7 +197,46 @@ exports[`ParametersField Tests Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-margin-2 makeStyles-textField-3"
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-disabled Mui-disabled MuiFormLabel-filled Mui-required Mui-required"
+      data-shrink={true}
+      htmlFor="dateOfRetirement"
+      id="dateOfRetirement-label"
+    >
+      退職日
+      <span
+        aria-hidden={true}
+        className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+      >
+         
+        *
+      </span>
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline Mui-disabled Mui-disabled MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        autoComplete="off"
+        autoFocus={false}
+        className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled"
+        disabled={true}
+        id="dateOfRetirement"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={true}
+        type="date"
+        value="Invalid Date"
+      />
+    </div>
+  </div>
+  <div
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
@@ -238,7 +276,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-margin-2 makeStyles-textField-3"
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"

@@ -6,6 +6,7 @@ import exportDocx from '../libs/export/exportDocx'
 import { ExportParameters } from '../libs/export/ExportParameters'
 import { parametersContext } from '../context/useParameters'
 import convertDateStringToJapanFormat from '../libs/convertDateStringToJapanFormat'
+import addTwoWeekDate from '../libs/addTwoWeekDate'
 
 type Props = {
   handleClose: () => void
@@ -37,7 +38,7 @@ export default function ExportDialogButtons(props: Props): React.ReactElement {
     companyName,
     department,
     representativeDirector,
-    dateOfRetirement,
+    dateOfNotification,
     reason,
     daysOfPaidLeaveRemaining,
   } = context
@@ -47,7 +48,10 @@ export default function ExportDialogButtons(props: Props): React.ReactElement {
     companyName,
     department,
     representativeDirector,
-    dateOfRetirement: convertDateStringToJapanFormat(dateOfRetirement),
+    dateOfNotification: convertDateStringToJapanFormat(dateOfNotification),
+    dateOfRetirement: convertDateStringToJapanFormat(
+      addTwoWeekDate(dateOfNotification)
+    ),
     reason,
     daysOfPaidLeaveRemaining,
   }

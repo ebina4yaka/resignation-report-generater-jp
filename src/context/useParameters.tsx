@@ -6,14 +6,14 @@ export type ParametersContext = {
   companyName: string
   department: string
   representativeDirector: string
-  dateOfRetirement: string
+  dateOfNotification: string
   reason: string
   daysOfPaidLeaveRemaining: number
   setName: (name: string) => void
   setCompanyName: (companyName: string) => void
   setDepartment: (department: string) => void
   setRepresentativeDirector: (representativeDirector: string) => void
-  setDateOfRetirement: (dateOfRetirement: string) => void
+  setDateOfNotification: (dateOfNotification: string) => void
   setReason: (reason: string) => void
   setDaysOfPaidLeaveRemaining: (daysOfPaidLeaveRemaining: number) => void
 }
@@ -23,14 +23,14 @@ const defaultContext: ParametersContext = {
   companyName: '',
   department: '',
   representativeDirector: '',
-  dateOfRetirement: '',
+  dateOfNotification: '',
   reason: '',
   daysOfPaidLeaveRemaining: 0,
   setName: () => {},
   setCompanyName: () => {},
   setDepartment: () => {},
   setRepresentativeDirector: () => {},
-  setDateOfRetirement: () => {},
+  setDateOfNotification: () => {},
   setReason: () => {},
   setDaysOfPaidLeaveRemaining: () => {},
 }
@@ -44,7 +44,7 @@ export default function useParameters(): ParametersContext {
   const [companyName, setCompanyNameState] = useState('')
   const [department, setDepartmentState] = useState('')
   const [representativeDirector, setRepresentativeDirectorState] = useState('')
-  const [dateOfRetirement, setDateOfRetirementState] = useState(
+  const [dateOfNotification, setDateOfNotificationState] = useState(
     dayjs().format('YYYY-MM-DD')
   )
   const [reason, setReasonState] = useState('')
@@ -63,8 +63,8 @@ export default function useParameters(): ParametersContext {
   const setRepresentativeDirector = useCallback((current: string): void => {
     setRepresentativeDirectorState(current)
   }, [])
-  const setDateOfRetirement = useCallback((current: string): void => {
-    setDateOfRetirementState(current)
+  const setDateOfNotification = useCallback((current: string): void => {
+    setDateOfNotificationState(current)
   }, [])
   const setReason = useCallback((current: string): void => {
     setReasonState(current)
@@ -77,14 +77,14 @@ export default function useParameters(): ParametersContext {
     companyName,
     department,
     representativeDirector,
-    dateOfRetirement,
+    dateOfNotification,
     reason,
     daysOfPaidLeaveRemaining,
     setName,
     setCompanyName,
     setDepartment,
     setRepresentativeDirector,
-    setDateOfRetirement,
+    setDateOfNotification,
     setReason,
     setDaysOfPaidLeaveRemaining,
   }

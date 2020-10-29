@@ -25,6 +25,9 @@ export default function exportDocx(parameters: ExportParameters): void {
         children: [new TextRun(parameters.representativeDirector)],
       }),
       new Paragraph({
+        children: [new TextRun(parameters.dateOfNotification)],
+      }),
+      new Paragraph({
         children: [new TextRun(parameters.dateOfRetirement)],
       }),
       new Paragraph({

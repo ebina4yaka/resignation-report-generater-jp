@@ -3,6 +3,7 @@ import { createStyles, makeStyles } from '@material-ui/core/styles'
 import { parametersContext } from '../context/useParameters'
 import Parameters from '../atoms/Parameter'
 import convertDateStringToJapanFormat from '../libs/convertDateStringToJapanFormat'
+import addTwoWeekDate from '../libs/addTwoWeekDate'
 
 const useStyles = makeStyles(
   createStyles({
@@ -22,7 +23,7 @@ export default function DisplayParameters(): React.ReactElement {
     companyName,
     department,
     representativeDirector,
-    dateOfRetirement,
+    dateOfNotification,
     reason,
     daysOfPaidLeaveRemaining,
   } = context
@@ -34,8 +35,14 @@ export default function DisplayParameters(): React.ReactElement {
       <Parameters name="所属部署" value={department} />
       <Parameters name="代表取締役" value={representativeDirector} />
       <Parameters
+        name="退職届け出日"
+        value={convertDateStringToJapanFormat(dateOfNotification)}
+      />
+      <Parameters
         name="退職日"
-        value={convertDateStringToJapanFormat(dateOfRetirement)}
+        value={convertDateStringToJapanFormat(
+          addTwoWeekDate(dateOfNotification)
+        )}
       />
       <Parameters name="退職理由" value={reason} />
       <Parameters
