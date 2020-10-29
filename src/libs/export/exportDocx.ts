@@ -2,9 +2,7 @@ import { AlignmentType, Document, Packer, Paragraph } from 'docx'
 import { saveAs } from 'file-saver'
 import { ExportParameters } from './ExportParameters'
 
-export default function exportDocx(parameters: ExportParameters): void {
-  const doc = new Document()
-
+function createResignationReport(parameters: ExportParameters): Paragraph[] {
   const top = [
     new Paragraph({
       text: '退職届',
@@ -65,12 +63,14 @@ export default function exportDocx(parameters: ExportParameters): void {
     ]
   })()
 
-  const section = (() => {
-    return top.concat(contents).concat(bottom)
-  })()
+  return top.concat(contents).concat(bottom)
+}
+
+export default function exportDocx(parameters: ExportParameters): void {
+  const doc = new Document()
 
   doc.addSection({
-    children: section,
+    children: createResignationReport(parameters),
   })
 
   Packer.toBlob(doc).then((blob) => {
