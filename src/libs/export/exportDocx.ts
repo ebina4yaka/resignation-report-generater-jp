@@ -19,6 +19,9 @@ export default function exportDocx(parameters: ExportParameters): void {
         children: [new TextRun(parameters.companyName)],
       }),
       new Paragraph({
+        children: [new TextRun(parameters.department)],
+      }),
+      new Paragraph({
         children: [new TextRun(parameters.representativeDirector)],
       }),
       new Paragraph({

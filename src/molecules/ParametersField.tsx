@@ -30,6 +30,7 @@ export default function ParametersField(): React.ReactElement {
   const {
     name,
     companyName,
+    department,
     representativeDirector,
     dateOfRetirement,
     reason,
@@ -52,6 +53,11 @@ export default function ParametersField(): React.ReactElement {
   const handleChangeCompanyName = (event: ChangeEvent<HTMLInputElement>) => {
     const { target } = event
     context.setCompanyName(target.value)
+  }
+
+  const handleChangeDepartment = (event: ChangeEvent<HTMLInputElement>) => {
+    const { target } = event
+    context.setDepartment(target.value)
   }
 
   const handleChangeDateOfRetirement = (
@@ -102,6 +108,18 @@ export default function ParametersField(): React.ReactElement {
         className={clsx(classes.margin, classes.textField)}
         autoComplete="off"
         onChange={handleChangeCompanyName}
+      />
+      <TextField
+        id="department"
+        label="所属部署"
+        defaultValue={department}
+        placeholder="開発部退職課"
+        InputLabelProps={{
+          shrink: true,
+        }}
+        className={clsx(classes.margin, classes.textField)}
+        autoComplete="off"
+        onChange={handleChangeDepartment}
       />
       <TextField
         required
