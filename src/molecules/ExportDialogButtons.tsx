@@ -3,7 +3,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import clsx from 'clsx'
 import exportDocx from '../libs/export/exportDocx'
-import { ExportParameters } from '../libs/export/exportParameters'
+import { ExportParameters } from '../libs/export/ExportParameters'
 import { parametersContext } from '../context/useParameters'
 import convertDateStringToJapanFormat from '../libs/convertDateStringToJapanFormat'
 

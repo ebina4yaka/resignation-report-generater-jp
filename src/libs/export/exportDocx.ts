@@ -1,6 +1,6 @@
 import { Document, Packer, Paragraph, TextRun } from 'docx'
 import { saveAs } from 'file-saver'
-import { ExportParameters } from './exportParameters'
+import { ExportParameters } from './ExportParameters'
 
 export default function exportDocx(parameters: ExportParameters): void {
   // Create document
