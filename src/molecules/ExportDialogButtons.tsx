@@ -79,14 +79,6 @@ export default function ExportDialogButtons(props: Props): React.ReactElement {
       >
         WORD出力
       </Button>
-      <Button
-        className={clsx(classes.margin, classes.button)}
-        variant="contained"
-        color="primary"
-        onClick={handleClose}
-      >
-        PDF出力
-      </Button>
     </div>
   )
 }
