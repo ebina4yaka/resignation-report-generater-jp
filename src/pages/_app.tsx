@@ -20,6 +20,16 @@ export default function MyApp(props: AppProps): React.ReactElement {
           primary: teal,
           secondary: deepPurple,
         },
+        overrides: {
+          MuiFormLabel: {
+            asterisk: {
+              color: '#db3131',
+              '&$error': {
+                color: '#db3131',
+              },
+            },
+          },
+        },
       }),
     [prefersDarkMode]
   )

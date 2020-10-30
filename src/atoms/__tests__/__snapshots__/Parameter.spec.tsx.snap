@@ -14,3 +14,5 @@ exports[`Snapshot test for Parameter 1`] = `
   </p>
 </div>
 `;
+
+exports[`Snapshot test for Parameter then empty value 1`] = `null`;
