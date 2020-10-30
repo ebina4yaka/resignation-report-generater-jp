@@ -8,3 +8,8 @@ test('Snapshot test for Parameter', () => {
     .toJSON()
   expect(tree).toMatchSnapshot()
 })
+
+test('Snapshot test for Parameter then empty value', () => {
+  const tree = renderer.create(<Parameter name="test name" value="" />).toJSON()
+  expect(tree).toMatchSnapshot()
+})

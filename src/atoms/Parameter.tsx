@@ -8,6 +8,9 @@ type Props = {
 
 export default function Parameters(props: Props): React.ReactElement {
   const { name, value } = props
+  if (value === '') {
+    return <></>
+  }
   return (
     <div>
       <Typography variant="h6">{name}</Typography>

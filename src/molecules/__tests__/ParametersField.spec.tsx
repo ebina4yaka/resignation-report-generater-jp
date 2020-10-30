@@ -26,9 +26,17 @@ describe('ParametersField Tests', () => {
       dom.container,
       'companyName'
     ) as HTMLInputElement
-    const inputDateOfRetirement = getById(
+    const inputDepartment = getById(
       dom.container,
-      'dateOfRetirement'
+      'department'
+    ) as HTMLInputElement
+    const inputRepresentativeDirector = getById(
+      dom.container,
+      'representativeDirector'
+    ) as HTMLInputElement
+    const inputDateOfNotification = getById(
+      dom.container,
+      'dateOfNotification'
     ) as HTMLInputElement
     const inputReason = getById(dom.container, 'reason') as HTMLInputElement
     const inputDaysOfPaidLeaveRemaining = getById(
@@ -39,7 +47,11 @@ describe('ParametersField Tests', () => {
     act(() => {
       fireEvent.change(inputName, { target: { value: '無職太郎' } })
       fireEvent.change(inputCompanyName, { target: { value: '株式会社無職' } })
-      fireEvent.change(inputDateOfRetirement, {
+      fireEvent.change(inputDepartment, { target: { value: '開発部退職課' } })
+      fireEvent.change(inputRepresentativeDirector, {
+        target: { value: '無職社長' },
+      })
+      fireEvent.change(inputDateOfNotification, {
         target: { value: '2020-01-01' },
       })
       fireEvent.change(inputReason, {
@@ -52,7 +64,9 @@ describe('ParametersField Tests', () => {
 
     expect(result.current.name).toBe('無職太郎')
     expect(result.current.companyName).toBe('株式会社無職')
-    expect(result.current.dateOfRetirement).toBe('2020-01-01')
+    expect(result.current.department).toBe('開発部退職課')
+    expect(result.current.representativeDirector).toBe('無職社長')
+    expect(result.current.dateOfNotification).toBe('2020-01-01')
     expect(result.current.reason).toBe('労働基準法に違反しているため')
     expect(result.current.daysOfPaidLeaveRemaining).toBe(10)
   })
