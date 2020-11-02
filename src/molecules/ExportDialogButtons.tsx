@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
-import clsx from 'clsx'
 import dayjs from 'dayjs'
 import exportDocx from '../libs/export/exportDocx'
 import { ExportParameters } from '../libs/export/ExportParameters'
@@ -21,11 +20,9 @@ const useStyles = makeStyles((theme: Theme) =>
       flexDirection: 'row',
       justifyContent: 'center',
     },
-    margin: {
-      margin: theme.spacing(2),
-    },
     button: {
       width: '14ch',
+      margin: theme.spacing(2),
     },
   })
 )
@@ -64,7 +61,7 @@ export default function ExportDialogButtons(props: Props): React.ReactElement {
   return (
     <div className={classes.root}>
       <Button
-        className={clsx(classes.margin, classes.button)}
+        className={classes.button}
         variant="contained"
         color="secondary"
         onClick={handleClose}
@@ -72,7 +69,7 @@ export default function ExportDialogButtons(props: Props): React.ReactElement {
         入力へ戻る
       </Button>
       <Button
-        className={clsx(classes.margin, classes.button)}
+        className={classes.button}
         variant="contained"
         color="primary"
         onClick={() => exportDocx(exportParameters)}
