@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for PreviewDocxTitle daysOfPaidLeaveRemaining is 0 1`] = `null`;
+
+exports[`Snapshot test for PreviewDocxTitle daysOfPaidLeaveRemaining is 1 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  ※別途有給取得の時季指定書あり
+</div>
+`;

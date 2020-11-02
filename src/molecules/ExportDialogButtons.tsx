@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center',
     },
     button: {
-      width: '14ch',
+      width: '15h',
       margin: theme.spacing(2),
     },
   })
@@ -74,7 +74,7 @@ export default function ExportDialogButtons(props: Props): React.ReactElement {
         color="primary"
         onClick={() => exportDocx(exportParameters)}
       >
-        WORD出力
+        ダウンロード
       </Button>
     </div>
   )

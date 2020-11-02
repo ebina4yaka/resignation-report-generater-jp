@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for PreviewDocxBody 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <div>
+    このたび一身上の都合により2020年11月7日をもって退職することといたしましたので、民法627条1項に基づき、本日、労働契約について解約の申し入れをいたします。
+  </div>
+  <div>
+    ※なお、離職票は退職日経過後に私の住所に郵送いただきますようお願い申し上げます。
+  </div>
+</div>
+`;

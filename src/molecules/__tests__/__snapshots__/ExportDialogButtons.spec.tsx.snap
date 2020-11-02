@@ -49,7 +49,7 @@ exports[`Snapshot test for ExportDialogButtons 1`] = `
     <span
       className="MuiButton-label"
     >
-      WORD出力
+      ダウンロード
     </span>
   </button>
 </div>
