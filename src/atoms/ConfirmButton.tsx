@@ -1,7 +1,6 @@
 import React from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
-import clsx from 'clsx'
 
 type Props = {
   text: string
@@ -11,11 +10,9 @@ type Props = {
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    margin: {
-      margin: theme.spacing(2),
-    },
     button: {
       width: '10ch',
+      margin: theme.spacing(2),
     },
   })
 )
@@ -29,7 +26,7 @@ export default function ConfirmButton(props: Props): React.ReactElement {
       return (
         <Button
           disabled
-          className={clsx(classes.margin, classes.button)}
+          className={classes.button}
           variant="contained"
           color="primary"
           onClick={onClickFunction}
@@ -40,7 +37,7 @@ export default function ConfirmButton(props: Props): React.ReactElement {
     }
     return (
       <Button
-        className={clsx(classes.margin, classes.button)}
+        className={classes.button}
         variant="contained"
         color="primary"
         onClick={onClickFunction}

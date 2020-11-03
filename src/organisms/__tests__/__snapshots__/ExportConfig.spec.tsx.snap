@@ -5,6 +5,5 @@ exports[`Snapshot test for ExportConfig 1`] = `
   className="MuiContainer-root makeStyles-root-1 MuiContainer-maxWidthSm"
 >
   <MockedParametersField />
-  <MockedParametersConfirm />
 </div>
 `;
