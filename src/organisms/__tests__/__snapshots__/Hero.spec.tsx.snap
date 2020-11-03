@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for Hero 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthMd"
+  >
+    <div
+      className="makeStyles-contents-2"
+    >
+      <h1
+        className="MuiTypography-root MuiTypography-h4 MuiTypography-colorTextPrimary MuiTypography-gutterBottom MuiTypography-alignCenter"
+      >
+        退職届ジェネレーター
+      </h1>
+      <h2
+        className="MuiTypography-root MuiTypography-h5 MuiTypography-colorTextSecondary MuiTypography-paragraph MuiTypography-alignCenter"
+      >
+        内容証明郵便で叩きつけよう！
+      </h2>
+      <div
+        className="makeStyles-image-3"
+      >
+        <MockedImage
+          height={200}
+          src="/top.png"
+          width={200}
+        />
+      </div>
+      <MockedHeroButtons />
+    </div>
+  </div>
+</div>
+`;

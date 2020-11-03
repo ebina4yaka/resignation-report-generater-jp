@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for FooterTopPage 1`] = `
+<footer
+  className="makeStyles-root-1"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthSm"
+  >
+    <p
+      className="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-alignCenter"
+    >
+      Released under the MIT License.
+    </p>
+    <MockedCopyright />
+  </div>
+</footer>
+`;
