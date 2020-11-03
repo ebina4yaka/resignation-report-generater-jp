@@ -5,7 +5,7 @@ exports[`Snapshot test for ExportDialogButtons 1`] = `
   className="makeStyles-root-1"
 >
   <button
-    className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-margin-2 makeStyles-button-3 MuiButton-containedSecondary"
+    className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-2 MuiButton-containedSecondary"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -29,7 +29,7 @@ exports[`Snapshot test for ExportDialogButtons 1`] = `
     </span>
   </button>
   <button
-    className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-margin-2 makeStyles-button-3 MuiButton-containedPrimary"
+    className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-2 MuiButton-containedPrimary"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -49,7 +49,7 @@ exports[`Snapshot test for ExportDialogButtons 1`] = `
     <span
       className="MuiButton-label"
     >
-      WORD出力
+      ダウンロード
     </span>
   </button>
 </div>

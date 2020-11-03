@@ -1,6 +1,12 @@
 import { AlignmentType, Document, Packer, Paragraph } from 'docx'
 import { saveAs } from 'file-saver'
 import { ExportParameters } from './ExportParameters'
+import {
+  getCompanyName,
+  getReason,
+  getRepresentativeDirector,
+  requestTicket,
+} from './textTemplates'
 
 function createResignationReport(parameters: ExportParameters): Paragraph[] {
   const top = [
@@ -9,11 +15,11 @@ function createResignationReport(parameters: ExportParameters): Paragraph[] {
       alignment: AlignmentType.CENTER,
     }),
     new Paragraph({
-      text: `${parameters.companyName} 御中`,
+      text: getCompanyName(parameters.companyName),
       alignment: AlignmentType.LEFT,
     }),
     new Paragraph({
-      text: `（代表取締役 ${parameters.representativeDirector} 様）`,
+      text: getRepresentativeDirector(parameters.representativeDirector),
       alignment: AlignmentType.LEFT,
     }),
   ]
@@ -21,14 +27,11 @@ function createResignationReport(parameters: ExportParameters): Paragraph[] {
   const contents = [
     new Paragraph({}),
     new Paragraph({
-      text:
-        `このたび${parameters.reason}により${parameters.dateOfRetirement}をもって` +
-        `退職することといたしましたので、民法627条1項に基づき、本日、労働契約について解約の申し入れをいたします。`,
+      text: getReason(parameters.reason, parameters.dateOfRetirement),
       alignment: AlignmentType.LEFT,
     }),
     new Paragraph({
-      text:
-        '※なお、離職票は退職日経過後に私の住所に郵送いただきますようお願い申し上げます。',
+      text: requestTicket,
       alignment: AlignmentType.LEFT,
     }),
     new Paragraph({}),
@@ -74,11 +77,11 @@ function createPaidLeaveRequestForm(parameters: ExportParameters): Paragraph[] {
       alignment: AlignmentType.CENTER,
     }),
     new Paragraph({
-      text: `${parameters.companyName} 御中`,
+      text: getCompanyName(parameters.companyName),
       alignment: AlignmentType.LEFT,
     }),
     new Paragraph({
-      text: `（代表取締役 ${parameters.representativeDirector} 様）`,
+      text: getRepresentativeDirector(parameters.representativeDirector),
       alignment: AlignmentType.LEFT,
     }),
   ]
