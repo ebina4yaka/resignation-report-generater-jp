@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function Footer(): React.ReactElement {
+export default function FooterDefault(): React.ReactElement {
   const classes = useStyles()
   return (
     <footer className={classes.root}>

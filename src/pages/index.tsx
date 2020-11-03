@@ -1,18 +1,22 @@
 import React from 'react'
-import Header from '../organisms/Header'
-import ExportConfig from '../organisms/ExportConfig'
-import ExportDialog from '../organisms/ExportDialog'
-import Footer from '../organisms/Footer'
-import useParameters, { parametersContext } from '../context/useParameters'
+import { makeStyles } from '@material-ui/core/styles'
+import Hero from '../organisms/Hero'
+import FooterTopPage from '../organisms/FooterTopPage'
+
+const useStyles = makeStyles({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
+  },
+})
 
 export default function Index(): React.ReactElement {
-  const context = useParameters()
+  const classes = useStyles()
   return (
-    <parametersContext.Provider value={context}>
-      <Header headerTitle="作成" />
-      <ExportConfig />
-      <ExportDialog />
-      <Footer />
-    </parametersContext.Provider>
+    <div className={classes.root}>
+      <Hero />
+      <FooterTopPage />
+    </div>
   )
 }

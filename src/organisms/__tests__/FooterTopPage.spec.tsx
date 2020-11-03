@@ -1,10 +1,10 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Footer from '../Footer'
+import FooterTopPage from '../FooterTopPage'
 
 jest.mock('../../atoms/Copyright', () => 'MockedCopyright')
 
-test('Snapshot test for Footer', () => {
-  const tree = renderer.create(<Footer />).toJSON()
+test('Snapshot test for FooterTopPage', () => {
+  const tree = renderer.create(<FooterTopPage />).toJSON()
   expect(tree).toMatchSnapshot()
 })
