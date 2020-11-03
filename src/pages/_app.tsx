@@ -51,6 +51,7 @@ export default function MyApp(props: AppProps): React.ReactElement {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <style type="text/css">{`body { font-family: 'Roboto' }`}</style>
       </Head>
       <ThemeProvider theme={theme}>
