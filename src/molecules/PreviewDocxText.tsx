@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import { parametersContext } from '../context/useParameters'
 import convertDateStringToJapanFormat from '../libs/convertDateStringToJapanFormat'
-import calcDateOfRetirement from '../libs/calcDateOfRetirement'
 import PreviewDocxTitle from '../atoms/PreviewDocxTitle'
 import PreviewDocxCompany from '../atoms/PreviewDocxCompany'
 import PreviewDocxBody from '../atoms/PreviewDocxBody'
@@ -33,7 +32,7 @@ export default function PreviewDocxText(): React.ReactElement {
     representativeDirector,
     dateOfNotification,
     reason,
-    daysOfPaidLeaveRemaining,
+    dateOfRetirement,
   } = context
   const classes = useStyles()
   return (
@@ -46,9 +45,7 @@ export default function PreviewDocxText(): React.ReactElement {
       <div className={classes.body}>
         <PreviewDocxBody
           reason={reason}
-          dateOfRetirement={convertDateStringToJapanFormat(
-            calcDateOfRetirement(dateOfNotification, daysOfPaidLeaveRemaining)
-          )}
+          dateOfRetirement={convertDateStringToJapanFormat(dateOfRetirement)}
         />
       </div>
       <PreviewDocxBottom
