@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     button: {
       width: '10ch',
-      margin: theme.spacing(2),
+      marginBottom: theme.spacing(3),
     },
   })
 )

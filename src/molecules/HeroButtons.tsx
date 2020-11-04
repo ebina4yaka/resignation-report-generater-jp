@@ -7,6 +7,7 @@ import Link from 'next/link'
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(2),
   },
 }))
 

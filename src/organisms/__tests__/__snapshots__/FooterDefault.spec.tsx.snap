@@ -7,7 +7,16 @@ exports[`Snapshot test for FooterDefault 1`] = `
   <h6
     className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
   >
-    退職届ジェネレーター
+    <a
+      className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
+      href="/"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+    >
+      退職届ジェネレーター
+    </a>
   </h6>
   <p
     className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary MuiTypography-alignCenter"
