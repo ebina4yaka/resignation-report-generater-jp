@@ -51,6 +51,14 @@ export default function Hero(): React.ReactElement {
             <Image src="/top.png" width={200} height={200} />
           </div>
           <HeroButtons />
+          <Typography
+            component="h3"
+            align="center"
+            color="textSecondary"
+            paragraph
+          >
+            ※Word形式(.docx)での出力に対応しています。
+          </Typography>
         </div>
       </Container>
     </div>

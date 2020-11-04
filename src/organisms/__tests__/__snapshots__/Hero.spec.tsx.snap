@@ -30,6 +30,11 @@ exports[`Snapshot test for Hero 1`] = `
         />
       </div>
       <MockedHeroButtons />
+      <h3
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-paragraph MuiTypography-alignCenter"
+      >
+        ※Word形式(.docx)での出力に対応しています。
+      </h3>
     </div>
   </div>
 </div>

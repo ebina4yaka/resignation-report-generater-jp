@@ -1,14 +1,17 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
-import { makeStyles } from '@material-ui/core/styles'
+import { createStyles, makeStyles } from '@material-ui/core/styles'
 import Link from 'next/link'
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    marginTop: theme.spacing(4),
-  },
-}))
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    root: {
+      marginTop: theme.spacing(4),
+      marginBottom: theme.spacing(2),
+    },
+  })
+)
 
 export default function HeroButtons(): React.ReactElement {
   const classes = useStyles()
