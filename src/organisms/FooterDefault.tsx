@@ -1,21 +1,28 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import MuiLink from '@material-ui/core/Link'
+import Link from 'next/link'
+import { createStyles } from '@material-ui/core'
 import Copyright from '../atoms/Copyright'
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
-  },
-}))
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    root: {
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(6),
+    },
+  })
+)
 
 export default function FooterDefault(): React.ReactElement {
   const classes = useStyles()
   return (
     <footer className={classes.root}>
       <Typography variant="h6" align="center" gutterBottom>
-        退職届ジェネレーター
+        <Link href="/" passHref>
+          <MuiLink color="inherit">退職届ジェネレーター</MuiLink>
+        </Link>
       </Typography>
       <Typography
         variant="subtitle1"
