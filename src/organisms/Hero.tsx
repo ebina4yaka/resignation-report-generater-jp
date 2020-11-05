@@ -8,7 +8,7 @@ import HeroButtons from '../molecules/HeroButtons'
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
-      padding: theme.spacing(8, 0, 6),
+      padding: theme.spacing(8, 0, 4),
     },
     contents: {
       display: 'flex',
