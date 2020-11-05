@@ -5,6 +5,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import { parametersContext } from '../context/useParameters'
 import removeNonNumberFromString from '../libs/removeNonNumberFromString'
 import calcDateOfRetirement from '../libs/calcDateOfRetirement'
+import convertNumberFromZenkaku from '../libs/convertNumberFromZenkaku'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -43,10 +44,8 @@ export default function ParametersField(): React.ReactElement {
   } = context
 
   useEffect(() => {
-    context.setDateOfRetirement(
-      calcDateOfRetirement(dateOfNotification, daysOfPaidLeaveRemaining)
-    )
-  }, [dateOfNotification, daysOfPaidLeaveRemaining])
+    context.setDateOfRetirement(calcDateOfRetirement(dateOfNotification))
+  }, [dateOfNotification])
 
   const handleChangeName = (event: ChangeEvent<HTMLInputElement>) => {
     const { target } = event
@@ -70,7 +69,7 @@ export default function ParametersField(): React.ReactElement {
     context.setDepartment(target.value)
   }
 
-  const handleChangeDateOfRetirement = (
+  const handleChangeDateOfNotification = (
     event: ChangeEvent<HTMLInputElement>
   ) => {
     const { target } = event
@@ -86,9 +85,18 @@ export default function ParametersField(): React.ReactElement {
     event: ChangeEvent<HTMLInputElement>
   ) => {
     const { target } = event
-    const valueNumber = Number(removeNonNumberFromString(target.value))
+    const valueNumber = Number(
+      removeNonNumberFromString(convertNumberFromZenkaku(target.value))
+    )
     context.setDaysOfPaidLeaveRemaining(valueNumber)
     target.value = String(valueNumber)
+  }
+
+  const handleChangeDateOfRetirement = (
+    event: ChangeEvent<HTMLInputElement>
+  ) => {
+    const { target } = event
+    context.setDateOfRetirement(target.value)
   }
 
   return (
@@ -168,11 +176,11 @@ export default function ParametersField(): React.ReactElement {
           shrink: true,
         }}
         autoComplete="off"
-        onChange={handleChangeDateOfRetirement}
+        onChange={handleChangeDateOfNotification}
       />
       <TextField
         required
-        label="残有給休暇日数"
+        label="消化有給休暇日数"
         id="daysOfPaidLeaveRemaining"
         defaultValue={daysOfPaidLeaveRemaining}
         className={classes.textField}
@@ -186,17 +194,18 @@ export default function ParametersField(): React.ReactElement {
         onChange={handleChangeDaysOfPaidLeaveRemaining}
       />
       <TextField
-        disabled
         required
         id="dateOfRetirement"
         label="退職日"
         type="date"
+        inputProps={{ min: calcDateOfRetirement(dateOfNotification) }}
         value={dateOfRetirement}
         className={classes.textField}
         InputLabelProps={{
           shrink: true,
         }}
         autoComplete="off"
+        onChange={handleChangeDateOfRetirement}
       />
     </div>
   )

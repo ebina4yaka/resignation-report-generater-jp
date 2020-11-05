@@ -245,7 +245,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
       htmlFor="daysOfPaidLeaveRemaining"
       id="daysOfPaidLeaveRemaining-label"
     >
-      残有給休暇日数
+      消化有給休暇日数
       <span
         aria-hidden={true}
         className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
@@ -288,7 +288,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
     className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
   >
     <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-disabled Mui-disabled Mui-required Mui-required"
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
       data-shrink={true}
       htmlFor="dateOfRetirement"
       id="dateOfRetirement-label"
@@ -303,16 +303,17 @@ exports[`ParametersField Tests Snapshot test 1`] = `
       </span>
     </label>
     <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline Mui-disabled Mui-disabled MuiInputBase-formControl MuiInput-formControl"
+      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
       onClick={[Function]}
     >
       <input
         aria-invalid={false}
         autoComplete="off"
         autoFocus={false}
-        className="MuiInputBase-input MuiInput-input Mui-disabled Mui-disabled"
-        disabled={true}
+        className="MuiInputBase-input MuiInput-input"
+        disabled={false}
         id="dateOfRetirement"
+        min="Invalid Date"
         onAnimationStart={[Function]}
         onBlur={[Function]}
         onChange={[Function]}

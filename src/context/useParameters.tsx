@@ -57,7 +57,7 @@ export default function useParameters(): ParametersContext {
     0
   )
   const [dateOfRetirement, setDateOfRetirementState] = useState(
-    calcDateOfRetirement(dateOfNotification, daysOfPaidLeaveRemaining)
+    calcDateOfRetirement(dateOfNotification)
   )
   const setName = useCallback((current: string): void => {
     setNameState(current)
