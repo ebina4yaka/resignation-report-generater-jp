@@ -5,7 +5,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
   className="makeStyles-root-1"
 >
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
@@ -45,7 +45,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
@@ -85,7 +85,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
@@ -118,7 +118,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
@@ -158,7 +158,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
@@ -198,7 +198,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
@@ -237,7 +237,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
@@ -285,7 +285,7 @@ exports[`ParametersField Tests Snapshot test 1`] = `
     </div>
   </div>
   <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-3"
+    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
