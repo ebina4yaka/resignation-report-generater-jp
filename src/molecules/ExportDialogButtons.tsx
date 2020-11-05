@@ -1,9 +1,8 @@
 import React, { useContext } from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
-import dayjs from 'dayjs'
-import exportDocx from '../libs/export/exportDocx'
-import { ExportParameters } from '../libs/export/ExportParameters'
+import downloadResignationReport from '../libs/export/downloadResignationReport'
+import { DocxParameters } from '../libs/export/DocxParameters'
 import { parametersContext } from '../context/useParameters'
 import convertDateStringToJapanFormat from '../libs/convertDateStringToJapanFormat'
 import calcDateOfRetirement from '../libs/calcDateOfRetirement'
@@ -41,19 +40,14 @@ export default function ExportDialogButtons(props: Props): React.ReactElement {
     daysOfPaidLeaveRemaining,
   } = context
 
-  const exportParameters: ExportParameters = {
+  const docxParameters: DocxParameters = {
     name,
     companyName,
     department,
     representativeDirector,
     dateOfNotification: convertDateStringToJapanFormat(dateOfNotification),
     dateOfRetirement: convertDateStringToJapanFormat(
-      calcDateOfRetirement(dateOfNotification, daysOfPaidLeaveRemaining)
-    ),
-    endDateOfPaidLeave: convertDateStringToJapanFormat(
-      dayjs(dateOfNotification)
-        .add(daysOfPaidLeaveRemaining, 'day')
-        .format('YYYY-MM-DD')
+      calcDateOfRetirement(dateOfNotification)
     ),
     reason,
     daysOfPaidLeaveRemaining,
@@ -72,7 +66,7 @@ export default function ExportDialogButtons(props: Props): React.ReactElement {
         className={classes.button}
         variant="contained"
         color="primary"
-        onClick={() => exportDocx(exportParameters)}
+        onClick={() => downloadResignationReport(docxParameters)}
       >
         ダウンロード
       </Button>

@@ -1,6 +1,6 @@
 import { AlignmentType, Document, Packer, Paragraph } from 'docx'
 import { saveAs } from 'file-saver'
-import { ExportParameters } from './ExportParameters'
+import { DocxParameters } from './DocxParameters'
 import {
   getCompanyName,
   getReason,
@@ -8,7 +8,7 @@ import {
   requestTicket,
 } from './textTemplates'
 
-function createResignationReport(parameters: ExportParameters): Paragraph[] {
+function createResignationReport(parameters: DocxParameters): Paragraph[] {
   const top = [
     new Paragraph({
       text: '退職届',
@@ -70,7 +70,7 @@ function createResignationReport(parameters: ExportParameters): Paragraph[] {
 }
 
 // 有給取得の時季指定書
-function createPaidLeaveRequestForm(parameters: ExportParameters): Paragraph[] {
+function createPaidLeaveRequestForm(parameters: DocxParameters): Paragraph[] {
   const top = [
     new Paragraph({
       text: '有給取得の時季指定書',
@@ -131,11 +131,11 @@ function createPaidLeaveRequestForm(parameters: ExportParameters): Paragraph[] {
 
   const date = [
     new Paragraph({
-      text: `${parameters.dateOfNotification}～${parameters.endDateOfPaidLeave}`,
+      text: `${parameters.dateOfNotification}～${parameters.dateOfRetirement}`,
       alignment: AlignmentType.LEFT,
     }),
     new Paragraph({
-      text: `合計 ${parameters.daysOfPaidLeaveRemaining}日間`,
+      text: `内 ${parameters.daysOfPaidLeaveRemaining}日間`,
       alignment: AlignmentType.LEFT,
     }),
   ]
@@ -143,7 +143,9 @@ function createPaidLeaveRequestForm(parameters: ExportParameters): Paragraph[] {
   return top.concat(applicant).concat(contents).concat(date)
 }
 
-export default function exportDocx(parameters: ExportParameters): void {
+export default function downloadResignationReport(
+  parameters: DocxParameters
+): void {
   const doc = new Document()
 
   doc.addSection({
