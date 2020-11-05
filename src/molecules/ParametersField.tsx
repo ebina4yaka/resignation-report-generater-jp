@@ -15,11 +15,6 @@ const useStyles = makeStyles((theme: Theme) =>
       flexDirection: 'column',
       justifyContent: 'center',
     },
-    text: {
-      marginLeft: 'auto',
-      marginRight: 'auto',
-      textAlign: 'left',
-    },
     textField: {
       width: '30ch',
       margin: theme.spacing(1),
