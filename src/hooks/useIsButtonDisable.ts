@@ -10,6 +10,7 @@ export default function useIsButtonDisable(
     representativeDirector,
     dateOfNotification,
     reason,
+    dateOfRetirement,
   } = context
   const [isDisable, setIsDisable] = useState(false)
   useEffect(() => {
@@ -18,7 +19,8 @@ export default function useIsButtonDisable(
         companyName === '' ||
         representativeDirector === '' ||
         dateOfNotification === '' ||
-        reason === ''
+        reason === '' ||
+        dateOfRetirement === ''
     )
   }, [context])
   return isDisable

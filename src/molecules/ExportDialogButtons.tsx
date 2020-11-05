@@ -5,7 +5,6 @@ import downloadResignationReport from '../libs/export/downloadResignationReport'
 import { DocxParameters } from '../libs/export/DocxParameters'
 import { parametersContext } from '../context/useParameters'
 import convertDateStringToJapanFormat from '../libs/convertDateStringToJapanFormat'
-import calcDateOfRetirement from '../libs/calcDateOfRetirement'
 
 type Props = {
   handleClose: () => void
@@ -38,6 +37,7 @@ export default function ExportDialogButtons(props: Props): React.ReactElement {
     dateOfNotification,
     reason,
     daysOfPaidLeaveRemaining,
+    dateOfRetirement,
   } = context
 
   const docxParameters: DocxParameters = {
@@ -46,9 +46,7 @@ export default function ExportDialogButtons(props: Props): React.ReactElement {
     department,
     representativeDirector,
     dateOfNotification: convertDateStringToJapanFormat(dateOfNotification),
-    dateOfRetirement: convertDateStringToJapanFormat(
-      calcDateOfRetirement(dateOfNotification)
-    ),
+    dateOfRetirement: convertDateStringToJapanFormat(dateOfRetirement),
     reason,
     daysOfPaidLeaveRemaining,
   }
