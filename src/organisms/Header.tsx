@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import DescriptionIcon from '@material-ui/icons/Description'
 
 type Props = {
-  headerTitle: string
+  title: string
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 export default function Header(props: Props): React.ReactElement {
-  const { headerTitle } = props
+  const { title } = props
   const classes = useStyles()
   return (
     <div className={classes.root}>
@@ -36,7 +36,7 @@ export default function Header(props: Props): React.ReactElement {
             <DescriptionIcon />
           </div>
           <Typography variant="h6" color="inherit" className={classes.title}>
-            {headerTitle}
+            {title}
           </Typography>
         </Toolbar>
       </AppBar>

@@ -9,7 +9,7 @@ export default function Create(): React.ReactElement {
   const context = useParameters()
   return (
     <parametersContext.Provider value={context}>
-      <Header headerTitle="作成" />
+      <Header title="作成" />
       <ExportConfig />
       <ExportDialog />
       <FooterDefault />

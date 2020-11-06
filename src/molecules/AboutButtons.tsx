@@ -7,30 +7,28 @@ import Link from 'next/link'
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
-      marginTop: theme.spacing(4),
-      marginBottom: theme.spacing(2),
+      margin: theme.spacing(2, 0, 3),
     },
     button: {
-      marginLeft: theme.spacing(2),
-      marginRight: theme.spacing(2),
-      width: '15ch',
+      margin: theme.spacing(0, 2, 0),
+      width: '20ch',
     },
   })
 )
 
-export default function HeroButtons(): React.ReactElement {
+export default function AboutButtons(): React.ReactElement {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <Grid container spacing={2} justify="center">
+      <Grid container justify="center">
         <Grid item>
-          <Link href="/about" passHref>
+          <Link href="/" passHref>
             <Button
               className={classes.button}
               variant="contained"
               color="secondary"
             >
-              使い方
+              トップへ戻る
             </Button>
           </Link>
           <Link href="/create" passHref>
@@ -39,7 +37,7 @@ export default function HeroButtons(): React.ReactElement {
               variant="contained"
               color="primary"
             >
-              作成する
+              退職届を作成する
             </Button>
           </Link>
         </Grid>
