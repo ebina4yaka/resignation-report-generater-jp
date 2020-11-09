@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 import Image from 'next/image'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'

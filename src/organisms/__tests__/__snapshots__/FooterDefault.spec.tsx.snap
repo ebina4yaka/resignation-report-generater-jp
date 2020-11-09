@@ -12,16 +12,18 @@ exports[`Snapshot test for FooterDefault 1`] = `
   <p
     className="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom MuiTypography-alignCenter"
   >
-    <a
-      className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
+    <MockedLink
       href="/"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onMouseEnter={[Function]}
+      passHref={true}
     >
-      トップページ
-    </a>
+      <a
+        className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        トップページ
+      </a>
+    </MockedLink>
   </p>
   <p
     className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary MuiTypography-alignCenter"

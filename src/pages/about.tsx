@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 import Header from '../organisms/Header'
 import FooterDefault from '../organisms/FooterDefault'
 import AboutButtons from '../molecules/AboutButtons'

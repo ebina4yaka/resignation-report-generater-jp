@@ -1,4 +1,4 @@
-import React, { ReactElement, useContext } from 'react'
+import { ReactElement, useContext } from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import { parametersContext } from '../context/useParameters'
 import convertDateStringToJapanFormat from '../libs/convertDateStringToJapanFormat'

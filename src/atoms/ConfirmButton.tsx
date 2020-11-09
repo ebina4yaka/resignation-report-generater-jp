@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-export default function ConfirmButton(props: Props): React.ReactElement {
+export default function ConfirmButton(props: Props): ReactElement {
   const { text, isDisable, onClickFunction } = props
   const classes = useStyles()
 

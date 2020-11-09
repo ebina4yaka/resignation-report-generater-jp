@@ -9259,10 +9259,10 @@ typeface-roboto@1.1.13:
   resolved "https://registry.yarnpkg.com/typeface-roboto/-/typeface-roboto-1.1.13.tgz#9c4517cb91e311706c74823e857b4bac9a764ae5"
   integrity sha512-YXvbd3a1QTREoD+FJoEkl0VQNJoEjewR2H11IjVv4bp6ahuIcw0yyw/3udC4vJkHw3T3cUh85FTg8eWef3pSaw==
 
-typescript@4.0.5:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.5.tgz#ae9dddfd1069f1cb5beb3ef3b2170dd7c1332389"
-  integrity sha512-ywmr/VrTVCmNTJ6iV2LwIrfG1P+lv6luD8sUJs+2eI9NLGigaN+nUQc13iHqisq7bra9lnmUSYqbJvegraBOPQ==
+typescript@4.1.0-beta:
+  version "4.1.0-beta"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.0-beta.tgz#e4d054035d253b7a37bdc077dd71706508573e69"
+  integrity sha512-b/LAttdVl3G6FEmnMkDsK0xvfvaftXpSKrjXn+OVCRqrwz5WD/6QJOiN+dTorqDY+hkaH+r2gP5wI1jBDmdQ7A==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"

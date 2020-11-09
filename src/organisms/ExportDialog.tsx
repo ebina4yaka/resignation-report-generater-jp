@@ -1,4 +1,4 @@
-import React, { ReactElement, useContext } from 'react'
+import { forwardRef, ReactElement, useContext } from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import DialogContent from '@material-ui/core/DialogContent'
@@ -34,7 +34,7 @@ const useStyles = makeStyles(
   })
 )
 
-const Transition = React.forwardRef(function Transition(
+const Transition = forwardRef(function Transition(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any,react/require-default-props
   props: TransitionProps & { children?: ReactElement<any, any> },
   ref: React.Ref<unknown>

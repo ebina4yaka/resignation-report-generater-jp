@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import Hero from '../organisms/Hero'
 import FooterTopPage from '../organisms/FooterTopPage'

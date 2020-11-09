@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 import Typography from '@material-ui/core/Typography'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import MuiLink from '@material-ui/core/Link'

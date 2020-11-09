@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { ReactElement } from 'react'
+import { useMemo, useEffect, ReactElement } from 'react'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -12,7 +12,7 @@ export default function MyApp(props: AppProps): ReactElement {
   const { Component, pageProps } = props
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
 
-  const theme = React.useMemo(
+  const theme = useMemo(
     () =>
       createMuiTheme({
         palette: {
@@ -34,7 +34,7 @@ export default function MyApp(props: AppProps): ReactElement {
     [prefersDarkMode]
   )
 
-  React.useEffect(() => {
+  useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {

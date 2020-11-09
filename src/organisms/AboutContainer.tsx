@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 import Container from '@material-ui/core/Container'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import { Paper } from '@material-ui/core'

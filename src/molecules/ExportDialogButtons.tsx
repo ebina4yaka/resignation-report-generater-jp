@@ -1,4 +1,4 @@
-import React, { ReactElement, useContext } from 'react'
+import { ReactElement, useContext } from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import downloadResignationReport from '../libs/export/downloadResignationReport'

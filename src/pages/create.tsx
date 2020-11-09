@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 import Header from '../organisms/Header'
 import ExportConfig from '../organisms/ExportConfig'
 import ExportDialog from '../organisms/ExportDialog'
