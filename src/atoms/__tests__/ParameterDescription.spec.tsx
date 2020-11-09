@@ -1,4 +1,3 @@
-import React from 'react'
 import renderer from 'react-test-renderer'
 import ParameterDescription from '../ParameterDescription'
 

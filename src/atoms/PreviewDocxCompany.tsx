@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactElement } from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import {
   getCompanyName,
@@ -18,7 +18,7 @@ const useStyles = makeStyles(
   })
 )
 
-export default function PreviewDocxCompany(props: Props): React.ReactElement {
+export default function PreviewDocxCompany(props: Props): ReactElement {
   const { companyName, representativeDirector } = props
   const classes = useStyles()
   return (

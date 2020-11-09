@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { forwardRef, ReactElement, useContext } from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import DialogContent from '@material-ui/core/DialogContent'
@@ -34,16 +34,16 @@ const useStyles = makeStyles(
   })
 )
 
-const Transition = React.forwardRef(function Transition(
+const Transition = forwardRef(function Transition(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any,react/require-default-props
-  props: TransitionProps & { children?: React.ReactElement<any, any> },
+  props: TransitionProps & { children?: ReactElement<any, any> },
   ref: React.Ref<unknown>
 ) {
   // eslint-disable-next-line react/jsx-props-no-spreading
   return <Slide direction="up" ref={ref} {...props} />
 })
 
-export default function ExportDialog(): React.ReactElement {
+export default function ExportDialog(): ReactElement {
   const context = useContext(parametersContext)
   const { daysOfPaidLeaveRemaining } = context
   const classes = useStyles()

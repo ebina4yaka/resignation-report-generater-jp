@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactElement } from 'react'
 import Typography from '@material-ui/core/Typography'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import Container from '@material-ui/core/Container'
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) =>
   })
 )
 
-export default function FooterTopPage(): React.ReactElement {
+export default function FooterTopPage(): ReactElement {
   const classes = useStyles()
   return (
     <footer className={classes.root}>

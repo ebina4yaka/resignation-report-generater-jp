@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactElement } from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import Hero from '../organisms/Hero'
 import FooterTopPage from '../organisms/FooterTopPage'
@@ -14,7 +14,7 @@ const useStyles = makeStyles(
   })
 )
 
-export default function Index(): React.ReactElement {
+export default function Index(): ReactElement {
   const classes = useStyles()
   return (
     <div className={classes.root}>

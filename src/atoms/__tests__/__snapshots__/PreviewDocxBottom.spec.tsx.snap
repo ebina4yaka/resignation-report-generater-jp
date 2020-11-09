@@ -4,14 +4,8 @@ exports[`Snapshot test for PreviewDocxBottom 1`] = `
 <div
   className="makeStyles-root-1"
 >
-  <div>
-    2020年11月7日
-  </div>
-  <div>
-    退職部
-  </div>
-  <div>
-    無職太郎
-  </div>
+  <div />
+  <div />
+  <div />
 </div>
 `;

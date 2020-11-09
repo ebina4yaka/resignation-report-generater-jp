@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactElement } from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 
 type Props = {
@@ -16,7 +16,7 @@ const useStyles = makeStyles(
 
 export default function IsPrintPaidLeaveRequestForm(
   props: Props
-): React.ReactElement {
+): ReactElement {
   const { daysOfPaidLeaveRemaining } = props
   const classes = useStyles()
   if (daysOfPaidLeaveRemaining > 0) {

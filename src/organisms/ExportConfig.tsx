@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactElement } from 'react'
 import { Container } from '@material-ui/core'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import ParametersField from '../molecules/ParametersField'
@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-export default function ExportConfig(): React.ReactElement {
+export default function ExportConfig(): ReactElement {
   const classes = useStyles()
   return (
     <Container className={classes.root} maxWidth="sm">

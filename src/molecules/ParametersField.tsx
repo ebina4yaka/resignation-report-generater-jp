@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useContext, useEffect } from 'react'
+import { ChangeEvent, ReactElement, useContext, useEffect } from 'react'
 import TextField from '@material-ui/core/TextField'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-export default function ParametersField(): React.ReactElement {
+export default function ParametersField(): ReactElement {
   const classes = useStyles()
   const context = useContext(parametersContext)
   const {

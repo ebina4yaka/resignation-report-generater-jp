@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactElement } from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 
 type Props = {
@@ -15,7 +15,7 @@ const useStyles = makeStyles(
   })
 )
 
-export default function PreviewDocxBottom(props: Props): React.ReactElement {
+export default function PreviewDocxBottom(props: Props): ReactElement {
   const { dateOfNotification, department, name } = props
   const classes = useStyles()
   return (
