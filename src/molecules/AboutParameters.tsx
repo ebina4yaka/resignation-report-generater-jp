@@ -1,6 +1,6 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
-import ParameterDescription from '../molecules/ParameterDescription'
+import ParameterDescription from '../atoms/ParameterDescription'
 
 export default function AboutParameters(): React.ReactElement {
   return (

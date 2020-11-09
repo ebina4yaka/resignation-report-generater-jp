@@ -2,8 +2,8 @@ import React from 'react'
 import Container from '@material-ui/core/Container'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import { Paper } from '@material-ui/core'
-import AboutParameters from './AboutParameters'
-import AboutUse from './AboutUse'
+import AboutParameters from '../molecules/AboutParameters'
+import AboutUse from '../molecules/AboutUse'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
