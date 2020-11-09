@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for AboutContainer 1`] = `
+<div
+  className="MuiContainer-root makeStyles-root-1 MuiContainer-maxWidthMd"
+>
+  <div
+    className="MuiPaper-root makeStyles-content-2 MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <MockedAboutUse />
+  </div>
+  <div
+    className="MuiPaper-root makeStyles-content-2 MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <MockedAboutParameters />
+  </div>
+</div>
+`;

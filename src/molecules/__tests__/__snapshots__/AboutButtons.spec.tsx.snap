@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for AboutButtons 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-center"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item"
+    >
+      <a
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-2 MuiButton-containedPrimary"
+        href="/create"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+      >
+        <span
+          className="MuiButton-label"
+        >
+          退職届を作成する
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;
