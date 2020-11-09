@@ -18,7 +18,7 @@ export default function TopPageButtons(): React.ReactElement {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <Grid container spacing={2} justify="center">
+      <Grid container justify="center">
         <Grid item>
           <Link
             href="https://github.com/ebina4yaka/resignation-report-generater-jp"
