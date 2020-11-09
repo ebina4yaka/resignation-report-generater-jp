@@ -19,9 +19,12 @@ export default function FooterDefault(): React.ReactElement {
   const classes = useStyles()
   return (
     <footer className={classes.root}>
-      <Typography variant="h6" align="center" gutterBottom>
+      <Typography variant="h6" align="center">
+        退職届ジェネレーター
+      </Typography>
+      <Typography align="center" color="textSecondary" gutterBottom>
         <Link href="/" passHref>
-          <MuiLink color="inherit">退職届ジェネレーター</MuiLink>
+          <MuiLink color="inherit">トップページ</MuiLink>
         </Link>
       </Typography>
       <Typography

@@ -8,12 +8,12 @@ import AboutUse from './AboutUse'
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
-      padding: theme.spacing(3, 0, 2),
+      padding: theme.spacing(2, 0, 2),
       flexDirection: 'column',
       justifyContent: 'center',
     },
     content: {
-      padding: theme.spacing(2.5, 6, 3),
+      padding: theme.spacing(2, 6, 3),
       margin: theme.spacing(2, 4, 2),
     },
   })

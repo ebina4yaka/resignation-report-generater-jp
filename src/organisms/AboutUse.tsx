@@ -22,6 +22,9 @@ export default function AboutUse(): React.ReactElement {
           3.表示内容を確認し、問題なければ「ダウンロード」ボタンを押します。
         </Typography>
         <Typography gutterBottom>4.完了！</Typography>
+        <Typography gutterBottom>
+          ※消化有給休暇日数が1日以上ある場合、ダウンロードファイルに有給取得の時季指定書が追加されます。
+        </Typography>
       </div>
     </div>
   )

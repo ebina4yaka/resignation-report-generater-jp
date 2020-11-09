@@ -7,7 +7,7 @@ import Link from 'next/link'
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
-      margin: theme.spacing(2, 0, 3),
+      margin: theme.spacing(0, 0, 4),
     },
     button: {
       margin: theme.spacing(0, 2, 0),
@@ -22,15 +22,6 @@ export default function AboutButtons(): React.ReactElement {
     <div className={classes.root}>
       <Grid container justify="center">
         <Grid item>
-          <Link href="/" passHref>
-            <Button
-              className={classes.button}
-              variant="contained"
-              color="secondary"
-            >
-              トップへ戻る
-            </Button>
-          </Link>
           <Link href="/create" passHref>
             <Button
               className={classes.button}
