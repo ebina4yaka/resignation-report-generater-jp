@@ -1,8 +1,8 @@
-import React from 'react'
+import { ReactElement } from 'react'
 import Typography from '@material-ui/core/Typography'
 import ParameterDescription from '../atoms/ParameterDescription'
 
-export default function AboutParameters(): React.ReactElement {
+export default function AboutParameters(): ReactElement {
   return (
     <div>
       <Typography

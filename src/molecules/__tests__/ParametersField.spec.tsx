@@ -1,4 +1,3 @@
-import React from 'react'
 import renderer from 'react-test-renderer'
 import { fireEvent, render, queryByAttribute } from '@testing-library/react'
 import { renderHook, act } from '@testing-library/react-hooks'

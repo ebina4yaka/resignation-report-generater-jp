@@ -33,12 +33,7 @@ exports[`Snapshot test for ExportDialog 1`] = `
     </div>
     <div
       className="MuiDialogContent-root"
-    >
-      <MockedPreviewDocxText />
-      <MockedIsPrintPaidLeaveRequestForm
-        daysOfPaidLeaveRemaining={0}
-      />
-    </div>
+    />
     <div
       className="MuiDialogActions-root makeStyles-buttonArea-3 MuiDialogActions-spacing"
     >

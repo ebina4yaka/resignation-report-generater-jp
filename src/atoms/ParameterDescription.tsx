@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactElement } from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) =>
   })
 )
 
-export default function ParameterDescription(props: Props): React.ReactElement {
+export default function ParameterDescription(props: Props): ReactElement {
   const { name, description } = props
   const classes = useStyles()
   return (

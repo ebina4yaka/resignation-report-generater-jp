@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactElement } from 'react'
 import Typography from '@material-ui/core/Typography'
 import Toolbar from '@material-ui/core/Toolbar'
 import AppBar from '@material-ui/core/AppBar'
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-export default function Header(props: Props): React.ReactElement {
+export default function Header(props: Props): ReactElement {
   const { title } = props
   const classes = useStyles()
   return (

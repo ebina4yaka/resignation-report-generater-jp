@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactElement } from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import { getReason, requestTicket } from '../libs/export/textTemplates'
 
@@ -15,7 +15,7 @@ const useStyles = makeStyles(
   })
 )
 
-export default function PreviewDocxBody(props: Props): React.ReactElement {
+export default function PreviewDocxBody(props: Props): ReactElement {
   const { reason, dateOfRetirement } = props
   const classes = useStyles()
   return (

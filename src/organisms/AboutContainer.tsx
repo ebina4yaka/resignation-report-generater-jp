@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactElement } from 'react'
 import Container from '@material-ui/core/Container'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import { Paper } from '@material-ui/core'
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) =>
   })
 )
 
-export default function AboutContainer(): React.ReactElement {
+export default function AboutContainer(): ReactElement {
   const classes = useStyles()
   return (
     <Container className={classes.root} maxWidth="md">

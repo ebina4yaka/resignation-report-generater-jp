@@ -6,14 +6,8 @@ exports[`Snapshot test for ParameterDescription 1`] = `
 >
   <p
     className="MuiTypography-root MuiTypography-body1"
-  >
-    test
-  </p>
-  <div>
-    test1
-  </div>
-  <div>
-    test2
-  </div>
+  />
+  <div />
+  <div />
 </div>
 `;
