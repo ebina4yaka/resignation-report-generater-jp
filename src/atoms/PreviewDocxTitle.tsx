@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(
@@ -9,7 +9,7 @@ const useStyles = makeStyles(
   })
 )
 
-export default function PreviewDocxTitle(): React.ReactElement {
+export default function PreviewDocxTitle(): ReactElement {
   const classes = useStyles()
   return <div className={classes.root}>退職届</div>
 }

@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import Typography from '@material-ui/core/Typography'
 
-export default function AboutUse(): React.ReactElement {
+export default function AboutUse(): ReactElement {
   return (
     <div>
       <Typography

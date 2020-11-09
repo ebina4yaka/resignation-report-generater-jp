@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react'
+import React, { ReactElement } from 'react'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -8,7 +8,7 @@ import { useMediaQuery } from '@material-ui/core'
 import 'typeface-roboto'
 import { deepPurple, teal } from '@material-ui/core/colors'
 
-export default function MyApp(props: AppProps): React.ReactElement {
+export default function MyApp(props: AppProps): ReactElement {
   const { Component, pageProps } = props
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
 

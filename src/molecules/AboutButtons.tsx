@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) =>
   })
 )
 
-export default function AboutButtons(): React.ReactElement {
+export default function AboutButtons(): ReactElement {
   const classes = useStyles()
   return (
     <div className={classes.root}>

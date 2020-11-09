@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import Typography from '@material-ui/core/Typography'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import MuiLink from '@material-ui/core/Link'
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) =>
   })
 )
 
-export default function FooterDefault(): React.ReactElement {
+export default function FooterDefault(): ReactElement {
   const classes = useStyles()
   return (
     <footer className={classes.root}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import Image from 'next/image'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) =>
   })
 )
 
-export default function Hero(): React.ReactElement {
+export default function Hero(): ReactElement {
   const classes = useStyles()
   return (
     <div className={classes.root}>

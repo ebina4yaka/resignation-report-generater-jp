@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { ReactElement, useContext } from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import { parametersContext } from '../context/useParameters'
 import convertDateStringToJapanFormat from '../libs/convertDateStringToJapanFormat'
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-export default function PreviewDocxText(): React.ReactElement {
+export default function PreviewDocxText(): ReactElement {
   const context = useContext(parametersContext)
   const {
     name,
