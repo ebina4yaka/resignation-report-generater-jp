@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for AboutUse 1`] = `
+<div>
+  <p
+    className="MuiTypography-root MuiTypography-h5 MuiTypography-colorTextPrimary MuiTypography-gutterBottom MuiTypography-paragraph MuiTypography-alignCenter"
+  >
+    使い方
+  </p>
+  <div>
+    <p
+      className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+    >
+      1.各種項目を入力します。
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+    >
+      2.画面下部の「確認」ボタンを押します。
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+    >
+      3.表示内容を確認し、問題なければ「ダウンロード」ボタンを押します。
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+    >
+      4.完了！
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+    >
+      ※消化有給休暇日数が1日以上ある場合、ダウンロードファイルに有給取得の時季指定書が追加されます。
+    </p>
+  </div>
+</div>
+`;

@@ -5,7 +5,12 @@ exports[`Snapshot test for FooterDefault 1`] = `
   className="makeStyles-root-1"
 >
   <h6
-    className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter"
+  >
+    退職届ジェネレーター
+  </h6>
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom MuiTypography-alignCenter"
   >
     <a
       className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
@@ -15,9 +20,9 @@ exports[`Snapshot test for FooterDefault 1`] = `
       onFocus={[Function]}
       onMouseEnter={[Function]}
     >
-      退職届ジェネレーター
+      トップページ
     </a>
-  </h6>
+  </p>
   <p
     className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary MuiTypography-alignCenter"
   >

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for AboutParameters 1`] = `
+<div>
+  <p
+    className="MuiTypography-root MuiTypography-h5 MuiTypography-colorTextPrimary MuiTypography-gutterBottom MuiTypography-paragraph MuiTypography-alignCenter"
+  >
+    入力項目の説明
+  </p>
+  <div>
+    <MockedParameterDescription
+      description={
+        Array [
+          "退職者の氏名",
+        ]
+      }
+      name="退職者"
+    />
+    <MockedParameterDescription
+      description={
+        Array [
+          "退職する会社の社名",
+        ]
+      }
+      name="会社名"
+    />
+    <MockedParameterDescription
+      description={
+        Array [
+          "退職者の所属部署名",
+        ]
+      }
+      name="所属部署"
+    />
+    <MockedParameterDescription
+      description={
+        Array [
+          "退職する会社の代表者の氏名",
+        ]
+      }
+      name="代表取締役"
+    />
+    <MockedParameterDescription
+      description={
+        Array [
+          "「○○○により～」の形式で出力されます。",
+          "※○○○ = 入力内容",
+        ]
+      }
+      name="退職理由"
+    />
+    <MockedParameterDescription
+      description={
+        Array [
+          "退職届を提出する日",
+        ]
+      }
+      name="退職届日"
+    />
+    <MockedParameterDescription
+      description={
+        Array [
+          "退職届を提出してから消化する有給休暇の日数",
+        ]
+      }
+      name="消化有給休暇日数"
+    />
+    <MockedParameterDescription
+      description={
+        Array [
+          "自動で退職届日から2週間後の日付が入ります。",
+          "消化する有給休暇の日数が多い場合は調整してください。",
+        ]
+      }
+      name="退職日"
+    />
+  </div>
+</div>
+`;
