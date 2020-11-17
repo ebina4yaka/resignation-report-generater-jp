@@ -1,0 +1,28 @@
+name: Publish jest coverage
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    name: Publish coverage
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '15.x'
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+      - run: yarn --frozen-lockfile
+      - run: yarn test:coverage
+      - run: cd coverage/lcov-report
+      - run: git init
+      - run: heroku git:remote -a $HEROKU_APP_NAME
+      - run: git add .
+      - run: git commit -am "update coverage"
+      - run: git push heroku master
