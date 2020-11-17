@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumberField Tests Snapshot test 1`] = `
+<div
+  className="MuiFormControl-root MuiTextField-root makeStyles-textField-1"
+>
+  <label
+    className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
+    data-shrink={true}
+    htmlFor="testNumber"
+    id="testNumber-label"
+  >
+    テスト
+    <span
+      aria-hidden={true}
+      className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+    >
+       
+      *
+    </span>
+  </label>
+  <div
+    className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
+    onClick={[Function]}
+  >
+    <input
+      aria-invalid={false}
+      autoComplete="off"
+      autoFocus={false}
+      className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
+      disabled={false}
+      id="testNumber"
+      onAnimationStart={[Function]}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      required={true}
+      type="text"
+      value={0}
+    />
+    <div
+      className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+    >
+      <p
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary"
+      >
+        日
+      </p>
+    </div>
+  </div>
+</div>
+`;
