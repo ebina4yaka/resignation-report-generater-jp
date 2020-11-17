@@ -1,13 +1,13 @@
-import { ChangeEvent, ReactElement, useContext, useEffect } from 'react'
-import TextField from '@material-ui/core/TextField'
-import InputAdornment from '@material-ui/core/InputAdornment'
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
+import { ReactElement, useContext, useEffect, memo } from 'react'
+import { createStyles, makeStyles } from '@material-ui/core/styles'
 import { parametersContext } from '../context/useParameters'
-import removeNonNumberFromString from '../libs/removeNonNumberFromString'
 import calcDateOfRetirement from '../libs/calcDateOfRetirement'
-import convertNumberFromZenkaku from '../libs/convertNumberFromZenkaku'
+import StringField from '../atoms/TextFields/StringField'
+import NumberField from '../atoms/TextFields/NumberField'
+import DateField from '../atoms/TextFields/DateField'
+import { TextFieldProps } from '../atoms/TextFields/TextFieldProps'
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(
   createStyles({
     root: {
       display: 'flex',
@@ -15,14 +15,47 @@ const useStyles = makeStyles((theme: Theme) =>
       flexDirection: 'column',
       justifyContent: 'center',
     },
-    textField: {
-      width: '30ch',
-      margin: theme.spacing(1),
-      marginLeft: 'auto',
-      marginRight: 'auto',
-    },
   })
 )
+
+const StringFieldMemo = memo((props: TextFieldProps<string>) => {
+  return (
+    <StringField
+      value={props.value}
+      setValue={props.setValue}
+      id={props.id}
+      label={props.label}
+      placeholder={props.placeholder}
+      isRequired={props.isRequired}
+    />
+  )
+})
+
+const DateFieldMemo = memo((props: TextFieldProps<string>) => {
+  return (
+    <DateField
+      value={props.value}
+      minValue={props.minValue}
+      setValue={props.setValue}
+      id={props.id}
+      label={props.label}
+      isRequired={props.isRequired}
+    />
+  )
+})
+
+const NumberFieldMemo = memo((props: TextFieldProps<number>) => {
+  return (
+    <NumberField
+      value={props.value}
+      setValue={props.setValue}
+      id={props.id}
+      label={props.label}
+      endAdornment={props.endAdornment}
+      isRequired={props.isRequired}
+    />
+  )
+})
 
 export default function ParametersField(): ReactElement {
   const classes = useStyles()
@@ -36,171 +69,84 @@ export default function ParametersField(): ReactElement {
     reason,
     daysOfPaidLeaveRemaining,
     dateOfRetirement,
+    setName,
+    setCompanyName,
+    setDepartment,
+    setRepresentativeDirector,
+    setDateOfNotification,
+    setReason,
+    setDaysOfPaidLeaveRemaining,
+    setDateOfRetirement,
   } = context
 
   useEffect(() => {
-    context.setDateOfRetirement(calcDateOfRetirement(dateOfNotification))
+    setDateOfRetirement(calcDateOfRetirement(dateOfNotification))
   }, [dateOfNotification])
-
-  const handleChangeName = (event: ChangeEvent<HTMLInputElement>) => {
-    const { target } = event
-    context.setName(target.value)
-  }
-
-  const handleChangeRepresentativeDirector = (
-    event: ChangeEvent<HTMLInputElement>
-  ) => {
-    const { target } = event
-    context.setRepresentativeDirector(target.value)
-  }
-
-  const handleChangeCompanyName = (event: ChangeEvent<HTMLInputElement>) => {
-    const { target } = event
-    context.setCompanyName(target.value)
-  }
-
-  const handleChangeDepartment = (event: ChangeEvent<HTMLInputElement>) => {
-    const { target } = event
-    context.setDepartment(target.value)
-  }
-
-  const handleChangeDateOfNotification = (
-    event: ChangeEvent<HTMLInputElement>
-  ) => {
-    const { target } = event
-    context.setDateOfNotification(target.value)
-  }
-
-  const handleChangeReason = (event: ChangeEvent<HTMLInputElement>) => {
-    const { target } = event
-    context.setReason(target.value)
-  }
-
-  const handleChangeDaysOfPaidLeaveRemaining = (
-    event: ChangeEvent<HTMLInputElement>
-  ) => {
-    const { target } = event
-    const valueNumber = Number(
-      removeNonNumberFromString(convertNumberFromZenkaku(target.value))
-    )
-    context.setDaysOfPaidLeaveRemaining(valueNumber)
-    target.value = String(valueNumber)
-  }
-
-  const handleChangeDateOfRetirement = (
-    event: ChangeEvent<HTMLInputElement>
-  ) => {
-    const { target } = event
-    context.setDateOfRetirement(target.value)
-  }
 
   return (
     <div className={classes.root}>
-      <TextField
-        required
+      <StringFieldMemo
+        value={name}
+        setValue={setName}
         id="name"
         label="退職者"
-        defaultValue={name}
         placeholder="無職太郎"
-        InputLabelProps={{
-          shrink: true,
-        }}
-        className={classes.textField}
-        autoComplete="off"
-        onChange={handleChangeName}
+        isRequired
       />
-      <TextField
-        required
+      <StringFieldMemo
+        value={companyName}
+        setValue={setCompanyName}
         id="companyName"
         label="会社名"
-        defaultValue={companyName}
         placeholder="株式会社無職"
-        InputLabelProps={{
-          shrink: true,
-        }}
-        className={classes.textField}
-        autoComplete="off"
-        onChange={handleChangeCompanyName}
+        isRequired
       />
-      <TextField
+      <StringFieldMemo
+        value={department}
+        setValue={setDepartment}
         id="department"
         label="所属部署"
-        defaultValue={department}
         placeholder="開発部退職課"
-        InputLabelProps={{
-          shrink: true,
-        }}
-        className={classes.textField}
-        autoComplete="off"
-        onChange={handleChangeDepartment}
+        isRequired={false}
       />
-      <TextField
-        required
+      <StringFieldMemo
+        value={representativeDirector}
+        setValue={setRepresentativeDirector}
         id="representativeDirector"
         label="代表取締役"
-        defaultValue={representativeDirector}
         placeholder="無職社長"
-        InputLabelProps={{
-          shrink: true,
-        }}
-        className={classes.textField}
-        autoComplete="off"
-        onChange={handleChangeRepresentativeDirector}
+        isRequired
       />
-      <TextField
-        required
+      <StringFieldMemo
+        value={reason}
+        setValue={setReason}
         id="reason"
         label="退職理由"
-        defaultValue={reason}
         placeholder="一身上の都合"
-        InputLabelProps={{
-          shrink: true,
-        }}
-        className={classes.textField}
-        autoComplete="off"
-        onChange={handleChangeReason}
+        isRequired
       />
-      <TextField
-        required
+      <DateFieldMemo
+        value={dateOfNotification}
+        setValue={setDateOfNotification}
         id="dateOfNotification"
         label="退職届け出日"
-        type="date"
-        defaultValue={dateOfNotification}
-        className={classes.textField}
-        InputLabelProps={{
-          shrink: true,
-        }}
-        autoComplete="off"
-        onChange={handleChangeDateOfNotification}
+        isRequired
       />
-      <TextField
-        required
+      <NumberFieldMemo
+        value={daysOfPaidLeaveRemaining}
+        setValue={setDaysOfPaidLeaveRemaining}
         label="消化有給休暇日数"
         id="daysOfPaidLeaveRemaining"
-        defaultValue={daysOfPaidLeaveRemaining}
-        className={classes.textField}
-        InputProps={{
-          endAdornment: <InputAdornment position="end">日</InputAdornment>,
-        }}
-        InputLabelProps={{
-          shrink: true,
-        }}
-        autoComplete="off"
-        onChange={handleChangeDaysOfPaidLeaveRemaining}
+        endAdornment="日"
+        isRequired
       />
-      <TextField
-        required
+      <DateFieldMemo
+        value={dateOfRetirement}
+        minValue={calcDateOfRetirement(dateOfNotification)}
+        setValue={setDateOfRetirement}
         id="dateOfRetirement"
         label="退職日"
-        type="date"
-        inputProps={{ min: calcDateOfRetirement(dateOfNotification) }}
-        value={dateOfRetirement}
-        className={classes.textField}
-        InputLabelProps={{
-          shrink: true,
-        }}
-        autoComplete="off"
-        onChange={handleChangeDateOfRetirement}
+        isRequired
       />
     </div>
   )
