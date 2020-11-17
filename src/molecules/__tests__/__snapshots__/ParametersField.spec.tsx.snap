@@ -4,325 +4,68 @@ exports[`ParametersField Tests Snapshot test 1`] = `
 <div
   className="makeStyles-root-1"
 >
-  <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
-  >
-    <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
-      data-shrink={true}
-      htmlFor="name"
-      id="name-label"
-    >
-      退職者
-      <span
-        aria-hidden={true}
-        className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
-      >
-         
-        *
-      </span>
-    </label>
-    <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
-    >
-      <input
-        aria-invalid={false}
-        autoComplete="off"
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        defaultValue=""
-        disabled={false}
-        id="name"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        placeholder="無職太郎"
-        required={true}
-        type="text"
-      />
-    </div>
-  </div>
-  <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
-  >
-    <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
-      data-shrink={true}
-      htmlFor="companyName"
-      id="companyName-label"
-    >
-      会社名
-      <span
-        aria-hidden={true}
-        className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
-      >
-         
-        *
-      </span>
-    </label>
-    <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
-    >
-      <input
-        aria-invalid={false}
-        autoComplete="off"
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        defaultValue=""
-        disabled={false}
-        id="companyName"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        placeholder="株式会社無職"
-        required={true}
-        type="text"
-      />
-    </div>
-  </div>
-  <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
-  >
-    <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
-      data-shrink={true}
-      htmlFor="department"
-      id="department-label"
-    >
-      所属部署
-    </label>
-    <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
-    >
-      <input
-        aria-invalid={false}
-        autoComplete="off"
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        defaultValue=""
-        disabled={false}
-        id="department"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        placeholder="開発部退職課"
-        required={false}
-        type="text"
-      />
-    </div>
-  </div>
-  <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
-  >
-    <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
-      data-shrink={true}
-      htmlFor="representativeDirector"
-      id="representativeDirector-label"
-    >
-      代表取締役
-      <span
-        aria-hidden={true}
-        className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
-      >
-         
-        *
-      </span>
-    </label>
-    <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
-    >
-      <input
-        aria-invalid={false}
-        autoComplete="off"
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        defaultValue=""
-        disabled={false}
-        id="representativeDirector"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        placeholder="無職社長"
-        required={true}
-        type="text"
-      />
-    </div>
-  </div>
-  <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
-  >
-    <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
-      data-shrink={true}
-      htmlFor="reason"
-      id="reason-label"
-    >
-      退職理由
-      <span
-        aria-hidden={true}
-        className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
-      >
-         
-        *
-      </span>
-    </label>
-    <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
-    >
-      <input
-        aria-invalid={false}
-        autoComplete="off"
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        defaultValue=""
-        disabled={false}
-        id="reason"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        placeholder="一身上の都合"
-        required={true}
-        type="text"
-      />
-    </div>
-  </div>
-  <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
-  >
-    <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
-      data-shrink={true}
-      htmlFor="dateOfNotification"
-      id="dateOfNotification-label"
-    >
-      退職届け出日
-      <span
-        aria-hidden={true}
-        className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
-      >
-         
-        *
-      </span>
-    </label>
-    <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
-    >
-      <input
-        aria-invalid={false}
-        autoComplete="off"
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        defaultValue=""
-        disabled={false}
-        id="dateOfNotification"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        required={true}
-        type="date"
-      />
-    </div>
-  </div>
-  <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
-  >
-    <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
-      data-shrink={true}
-      htmlFor="daysOfPaidLeaveRemaining"
-      id="daysOfPaidLeaveRemaining-label"
-    >
-      消化有給休暇日数
-      <span
-        aria-hidden={true}
-        className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
-      >
-         
-        *
-      </span>
-    </label>
-    <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
-      onClick={[Function]}
-    >
-      <input
-        aria-invalid={false}
-        autoComplete="off"
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
-        defaultValue={0}
-        disabled={false}
-        id="daysOfPaidLeaveRemaining"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        required={true}
-        type="text"
-      />
-      <div
-        className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
-      >
-        <p
-          className="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary"
-        >
-          日
-        </p>
-      </div>
-    </div>
-  </div>
-  <div
-    className="MuiFormControl-root MuiTextField-root makeStyles-textField-2"
-  >
-    <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-required Mui-required"
-      data-shrink={true}
-      htmlFor="dateOfRetirement"
-      id="dateOfRetirement-label"
-    >
-      退職日
-      <span
-        aria-hidden={true}
-        className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
-      >
-         
-        *
-      </span>
-    </label>
-    <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-      onClick={[Function]}
-    >
-      <input
-        aria-invalid={false}
-        autoComplete="off"
-        autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
-        disabled={false}
-        id="dateOfRetirement"
-        min="Invalid Date"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        required={true}
-        type="date"
-        value=""
-      />
-    </div>
-  </div>
+  <MockedStringField
+    id="name"
+    isRequired={true}
+    label="退職者"
+    placeholder="無職太郎"
+    setValue={[Function]}
+    value=""
+  />
+  <MockedStringField
+    id="companyName"
+    isRequired={true}
+    label="会社名"
+    placeholder="株式会社無職"
+    setValue={[Function]}
+    value=""
+  />
+  <MockedStringField
+    id="department"
+    isRequired={false}
+    label="所属部署"
+    placeholder="開発部退職課"
+    setValue={[Function]}
+    value=""
+  />
+  <MockedStringField
+    id="representativeDirector"
+    isRequired={true}
+    label="代表取締役"
+    placeholder="無職社長"
+    setValue={[Function]}
+    value=""
+  />
+  <MockedStringField
+    id="reason"
+    isRequired={true}
+    label="退職理由"
+    placeholder="一身上の都合"
+    setValue={[Function]}
+    value=""
+  />
+  <MockedDateField
+    id="dateOfNotification"
+    isRequired={true}
+    label="退職届け出日"
+    setValue={[Function]}
+    value=""
+  />
+  <MockedNumberField
+    endAdornment="日"
+    id="daysOfPaidLeaveRemaining"
+    isRequired={true}
+    label="消化有給休暇日数"
+    setValue={[Function]}
+    value={0}
+  />
+  <MockedDateField
+    id="dateOfRetirement"
+    isRequired={true}
+    label="退職日"
+    minValue="Invalid Date"
+    setValue={[Function]}
+    value=""
+  />
 </div>
 `;
