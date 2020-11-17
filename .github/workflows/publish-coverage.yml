@@ -15,15 +15,16 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: '15.x'
+        run: yarn --frozen-lockfile && yarn test:coverage
+
+      - name: Git init
+        run: cd coverage/lcov-report && git init
+
+      - name: Git commit
+        run: git add . && git commit -am "init coverage"
+
+      - name: Publish to heroku
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
           HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
-      - run: yarn --frozen-lockfile
-      - run: yarn test:coverage
-      - run: cd coverage/lcov-report
-      - run: git init
-      - run: heroku login
-      - run: heroku git:remote -a $HEROKU_APP_NAME
-      - run: git add .
-      - run: git commit -am "update coverage"
-      - run: git push -f heroku master
+        run: git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
