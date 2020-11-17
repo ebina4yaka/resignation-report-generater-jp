@@ -22,7 +22,7 @@ jobs:
       - run: yarn test:coverage
       - run: cd coverage/lcov-report
       - run: git init
-      - run: heroku git:remote -a $HEROKU_APP_NAME
+      - run: heroku git:remote --app $HEROKU_APP_NAME
       - run: git add .
       - run: git commit -am "update coverage"
-      - run: git push heroku master
+      - run: git push -f heroku master
