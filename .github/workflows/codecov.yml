@@ -1,11 +1,11 @@
-name: Codecov Upload Coverage
+name: Codecov
 on:
   push:
     branches:
       - main
 jobs:
   test:
-    name: Test coverage
+    name: Upload coverage
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
