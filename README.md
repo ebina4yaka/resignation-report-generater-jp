@@ -1,5 +1,5 @@
 # 退職届ジェネレーター
-
+[![codecov](https://codecov.io/gh/ebina4yaka/resignation-report-generater-jp/branch/main/graph/badge.svg)](https://codecov.io/gh/ebina4yaka/resignation-report-generater-jp)  
 退職届が簡単に作成できるWEBアプリです。  
 Microsoft Office Word形式でダウンロードが可能です。(拡張子.docx)  
 必要に応じて
