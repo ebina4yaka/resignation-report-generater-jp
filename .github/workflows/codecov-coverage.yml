@@ -1,0 +1,21 @@
+name: Codecov Upload Coverage
+on:
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    name: Test coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '15.x'
+      - run: yarn --frozen-lockfile
+      - run: yarn test:coverage
+      - name: Upload Coverage
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
