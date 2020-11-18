@@ -4,11 +4,15 @@ exports[`Snapshot test for ExportDialog 1`] = `
 <div
   className="makeStyles-root-1"
 >
-  <MockedConfirmButton
-    isDisable={false}
-    onClickFunction={[Function]}
-    text="確認"
-  />
+  <div
+    className="makeStyles-confirm-3"
+  >
+    <MockedConfirmButton
+      isDisable={false}
+      onClickFunction={[Function]}
+      text="確認"
+    />
+  </div>
   <MockedDialog
     TransitionComponent={
       Object {
@@ -35,7 +39,7 @@ exports[`Snapshot test for ExportDialog 1`] = `
       className="MuiDialogContent-root"
     />
     <div
-      className="MuiDialogActions-root makeStyles-buttonArea-3 MuiDialogActions-spacing"
+      className="MuiDialogActions-root makeStyles-buttonArea-4 MuiDialogActions-spacing"
     >
       <MockedExportDialogButtons
         handleClose={[Function]}
