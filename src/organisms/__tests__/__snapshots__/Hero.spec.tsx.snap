@@ -8,7 +8,7 @@ exports[`Snapshot test for Hero 1`] = `
     className="MuiContainer-root MuiContainer-maxWidthMd"
   >
     <div
-      className="makeStyles-contents-2"
+      className="makeStyles-contents-3"
     >
       <h1
         className="MuiTypography-root MuiTypography-h4 MuiTypography-colorTextPrimary MuiTypography-gutterBottom MuiTypography-alignCenter"
@@ -21,7 +21,7 @@ exports[`Snapshot test for Hero 1`] = `
         内容証明郵便で叩きつけよう！
       </h2>
       <div
-        className="makeStyles-image-3"
+        className="makeStyles-image-4"
       >
         <MockedImage
           height={200}
@@ -29,7 +29,11 @@ exports[`Snapshot test for Hero 1`] = `
           width={200}
         />
       </div>
-      <MockedHeroButtons />
+      <div
+        className="makeStyles-buttons-2"
+      >
+        <MockedHeroButtons />
+      </div>
       <h3
         className="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-paragraph MuiTypography-alignCenter"
       >

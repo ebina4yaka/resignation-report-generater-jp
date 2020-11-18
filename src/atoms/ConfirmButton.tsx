@@ -1,5 +1,5 @@
 import { ReactElement } from 'react'
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
+import { createStyles, makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 
 type Props = {
@@ -8,11 +8,10 @@ type Props = {
   onClickFunction: () => void
 }
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(
   createStyles({
-    button: {
+    root: {
       width: '10ch',
-      marginBottom: theme.spacing(3),
     },
   })
 )
@@ -26,7 +25,7 @@ export default function ConfirmButton(props: Props): ReactElement {
       return (
         <Button
           disabled
-          className={classes.button}
+          className={classes.root}
           variant="contained"
           color="primary"
           onClick={onClickFunction}
@@ -37,7 +36,7 @@ export default function ConfirmButton(props: Props): ReactElement {
     }
     return (
       <Button
-        className={classes.button}
+        className={classes.root}
         variant="contained"
         color="primary"
         onClick={onClickFunction}
