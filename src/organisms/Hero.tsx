@@ -10,6 +10,10 @@ const useStyles = makeStyles((theme) =>
     root: {
       padding: theme.spacing(8, 0, 4),
     },
+    buttons: {
+      marginTop: theme.spacing(4),
+      marginBottom: theme.spacing(2),
+    },
     contents: {
       display: 'flex',
       flexDirection: 'column',
@@ -50,7 +54,9 @@ export default function Hero(): ReactElement {
           <div className={classes.image}>
             <Image src="/top.png" width={200} height={200} />
           </div>
-          <HeroButtons />
+          <div className={classes.buttons}>
+            <HeroButtons />
+          </div>
           <Typography
             component="h3"
             align="center"

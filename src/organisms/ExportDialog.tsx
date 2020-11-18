@@ -1,4 +1,4 @@
-import { forwardRef, ReactElement, useContext } from 'react'
+import { forwardRef, Ref, ReactElement, useContext } from 'react'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import DialogContent from '@material-ui/core/DialogContent'
@@ -14,7 +14,7 @@ import PreviewDocxText from '../molecules/PreviewDocxText'
 import ExportDialogButtons from '../molecules/ExportDialogButtons'
 import IsPrintPaidLeaveRequestForm from '../atoms/IsPrintPaidLeaveRequestForm'
 
-const useStyles = makeStyles(
+const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       display: 'flex',
@@ -24,6 +24,9 @@ const useStyles = makeStyles(
     },
     title: {
       textAlign: 'center',
+    },
+    confirm: {
+      marginBottom: theme.spacing(3),
     },
     buttonArea: {
       display: 'flex',
@@ -35,9 +38,9 @@ const useStyles = makeStyles(
 )
 
 const Transition = forwardRef(function Transition(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any,react/require-default-props
-  props: TransitionProps & { children?: ReactElement<any, any> },
-  ref: React.Ref<unknown>
+  // eslint-disable-next-line react/require-default-props
+  props: TransitionProps & { children?: ReactElement },
+  ref: Ref<unknown>
 ) {
   // eslint-disable-next-line react/jsx-props-no-spreading
   return <Slide direction="up" ref={ref} {...props} />
@@ -50,11 +53,13 @@ export default function ExportDialog(): ReactElement {
   const { isOpen, handleOpen, handleClose } = useDialogOpen()
   return (
     <div className={classes.root}>
-      <ConfirmButton
-        text="確認"
-        isDisable={useIsButtonDisable(context)}
-        onClickFunction={handleOpen}
-      />
+      <div className={classes.confirm}>
+        <ConfirmButton
+          text="確認"
+          isDisable={useIsButtonDisable(context)}
+          onClickFunction={handleOpen}
+        />
+      </div>
       <Dialog
         open={isOpen}
         TransitionComponent={Transition}
