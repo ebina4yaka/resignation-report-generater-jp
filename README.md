@@ -1,10 +1,13 @@
 # 退職届ジェネレーター
 [![codecov](https://codecov.io/gh/ebina4yaka/resignation-report-generater-jp/branch/main/graph/badge.svg)](https://codecov.io/gh/ebina4yaka/resignation-report-generater-jp)  
+[letsretire.app](https://letsretire.app)  
 退職届が簡単に作成できるWEBアプリです。  
 Microsoft Office Word形式でダウンロードが可能です。(拡張子.docx)  
 必要に応じて
-[Microsoft Office Online](https://www.microsoft.com/ja-jp/microsoft-365/free-office-online-for-the-web)や
-[LibreOffice](https://ja.libreoffice.org/)などを使って表示、編集、印刷等してください。
+[Microsoft Office Online](https://www.microsoft.com/ja-jp/microsoft-365/free-office-online-for-the-web)
+や
+[LibreOffice](https://ja.libreoffice.org/)
+などを使って表示、編集、印刷等してください。
 
 ## 使い方
 
