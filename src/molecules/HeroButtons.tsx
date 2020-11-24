@@ -7,8 +7,7 @@ import Link from 'next/link'
 const useStyles = makeStyles((theme) =>
   createStyles({
     button: {
-      marginLeft: theme.spacing(2),
-      marginRight: theme.spacing(2),
+      margin: theme.spacing(1.5, 2, 1.5),
       width: '15ch',
     },
   })
